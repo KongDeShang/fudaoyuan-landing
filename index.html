@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>辅导员工作平台 · 辅导员专用离线 AI 工作台</title>
 <meta name="description" content="辅导员工作平台：高校辅导员专用的本地 AI 工作台。数据统计、学生管理、学业预警、政策资料库、AI 全部本机运行，数据不出电脑。" />
+<meta property="og:title" content="辅导员工作平台 · 辅导员专用离线 AI 工作台" />
+<meta property="og:description" content="本地大模型，数据不出电脑。问一句话，AI 帮你查、帮你算、帮你写——成绩统计、学业预警、谈心谈话、政策检索。32 个功能模块，基础版永久免费。" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kongdeshang.github.io/fudaoyuan-landing/" />
+<meta property="og:image" content="https://kongdeshang.github.io/fudaoyuan-landing/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
 <!--
   辅导员工作平台 · 推荐 / 下载 / 授权介绍页（蓝白高级版）
   单文件、零外部依赖：粒子星网 / 辉光跟随 / 磁性按钮 / 3D产品窗 / 打字机 / 数字滚动 / 滚动显现 / 跑马灯。
@@ -744,6 +750,7 @@ footer a:hover{transform:translateY(-2px)}
     <div class="qa reveal"><h4>激活码能多台电脑用吗？</h4><p class="a">激活码会绑定第一台激活它的设备。专业版、旗舰版按席位授权，每个席位一个码，各自绑定各自机器。</p></div>
     <div class="qa reveal"><h4>过期了 / 重装系统怎么办？</h4><p class="a">激活码含有效期，到期需续发；重装系统后在同一台机器可用原码重新激活（老授权兼容）。</p></div>
     <div class="qa reveal"><h4>AI 回答要更好，选哪一档模型？</h4><p class="a">模型档（4B / 8B）与授权档是两套：模型看内存，授权看购买。要复杂推理用 8B（强力档）模型，标准版及以上授权都能下载。</p></div>
+    <div class="qa reveal"><h4>这和学校的学生管理系统冲突吗？</h4><p class="a">不冲突。它是辅导员个人的辅助工具：不接学校系统、不占用学校账号、不上传任何数据，数据只存在你电脑上。学校系统管全校的归档与流程，它管你每天的工作效率——两个可以同时用，互补不替代。</p></div>
   </div>
 </div></section>
 
@@ -819,7 +826,7 @@ footer a:hover{transform:translateY(-2px)}
   counts.forEach(function(e){ cio ? cio.observe(e) : countUp(e) })
 
   /* 打字机 */
-  var words=['谁能查谁挂科最多','哪个班缺勤率最高','写一段期末总结','查学生档案','问政策怎么做','要一条工作建议']
+  var words=['谁能查谁挂科最多','哪个班缺勤率最高','写一段期末总结','查一下学生档案','资助政策怎么申请','要一条工作建议','盘点今天的班级情况']
   var tw=doc.getElementById('typeword'), wi=0, ci=0, del=false
   function type(){
     var word=words[wi]
