@@ -169,6 +169,24 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 .pain-solution p{font-size:16px;color:var(--ink);line-height:1.8}
 .pain-solution .arrow{display:inline-block;font-size:24px;margin-right:10px;color:var(--brand);animation:arrowBounce 1.5s ease-in-out infinite}
 @keyframes arrowBounce{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+
+/* hero 定位句 */
+.hero-pos{margin-top:18px;font-size:15.5px;color:var(--ink);font-weight:600;line-height:1.7}
+.hero-pos u{color:var(--brand);text-decoration:none;border-bottom:2px solid rgba(22,119,255,.35)}
+
+/* 定位对比：不是学校系统，是私人助手 */
+.pos-divider{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch;max-width:860px;margin:0 auto}
+.pos-side{border-radius:18px;padding:26px 24px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.pos-side:hover{transform:translateY(-3px)}
+.pos-school{background:rgba(148,163,184,.06);border:1px solid rgba(148,163,184,.28)}
+.pos-school .pos-ic{opacity:.6;filter:grayscale(.4)}
+.pos-school h4,.pos-school p{color:var(--ink3)}
+.pos-mine{background:linear-gradient(135deg,rgba(22,119,255,.14),rgba(56,189,248,.08));border:1px solid rgba(22,119,255,.45);box-shadow:0 14px 34px rgba(16,88,180,.15)}
+.pos-mine::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradbtn);opacity:.9;box-shadow:0 0 14px rgba(56,189,248,.6)}
+.pos-ic{font-size:28px;margin-bottom:12px}
+.pos-side h4{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:10px}
+.pos-side p{font-size:13.5px;color:var(--ink2);line-height:1.7}
+.pos-vs{align-self:center;justify-self:center;font-size:13px;font-weight:800;letter-spacing:1px;color:var(--brand);background:rgba(22,119,255,.1);border:1px solid rgba(22,119,255,.35);border-radius:999px;padding:9px 12px;white-space:nowrap}
 .card::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(22,119,255,.08),rgba(56,189,248,.05));opacity:0;transition:.3s}
 .card::after{content:"";position:absolute;inset:0;background:radial-gradient(320px at var(--mx,50%) var(--my,50%),rgba(22,119,255,.16),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
 .card:hover{border-color:rgba(22,119,255,.5);box-shadow:0 22px 48px rgba(16,88,180,.16)}
@@ -299,7 +317,7 @@ footer .row{display:flex;gap:20px;justify-content:center;margin-bottom:14px;flex
 .about-sign{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink3);font-style:italic}
 
 @media (max-width:960px){.feat,.models,.steps{grid-template-columns:1fr 1fr}.tiers{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:46px}.nav-links a.navlink{display:none}.why-grid{grid-template-columns:1fr 1fr}.pain-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.feat,.models,.steps,.tiers{grid-template-columns:1fr}.hero h1{font-size:36px}.hero .sub{font-size:16px}.hero-stats .stat{min-width:44%}.why-grid{grid-template-columns:1fr}.pain-grid{grid-template-columns:1fr}.scene{grid-template-columns:1fr;gap:10px}.scene-time{display:inline-block;width:auto}.about-card{grid-template-columns:1fr;text-align:center}.about-avatar{margin:0 auto}}
+@media (max-width:600px){.feat,.models,.steps,.tiers,.pos-divider{grid-template-columns:1fr}.hero h1{font-size:36px}.hero .sub{font-size:16px}.hero-stats .stat{min-width:44%}.why-grid{grid-template-columns:1fr}.pain-grid{grid-template-columns:1fr}.scene{grid-template-columns:1fr;gap:10px}.scene-time{display:inline-block;width:auto}.about-card{grid-template-columns:1fr;text-align:center}.about-avatar{margin:0 auto}}
 
 /* ===== 灵动交互增强 ===== */
 
@@ -412,7 +430,8 @@ footer a:hover{transform:translateY(-2px)}
   <div class="hero-top">
     <div class="kicker reveal"><span class="dot"></span>离线 · 本地大模型 · 数据不出这台电脑</div>
     <h1 class="reveal">辅导员专用<br /><span class="g">离线 AI 工作台</span></h1>
-    <p class="sub reveal">成绩统计、学业预警、谈心谈话、政策检索、班级台账——<b>问一句话，AI 帮你查、帮你算、帮你写</b>。模型跑在你自己电脑上，学生数据<u>永远不出这台机器</u>。</p>
+    <p class="sub reveal"><b>问一句话，AI 帮你查、帮你算、帮你写</b>。模型跑在你自己电脑上，学生数据<u>永远不出这台机器</u>。</p>
+    <p class="hero-pos reveal">不是学校系统，是你自己的私人助手——<u>数据在你手里，用法你说了算</u>。</p>
     <div class="type-line reveal"><span>直接问：</span><span class="w" id="typeword"></span><span class="type-cursor"></span></div>
     <div class="cta reveal">
       <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">下载安装包 · 免费</a>
@@ -505,6 +524,28 @@ footer a:hover{transform:translateY(-2px)}
   <div class="pain-solution reveal">
     <span class="arrow">→</span>
     <p><b>辅导员工作平台</b> 就是为了解决这些问题而做的。<br />一个本地运行的 AI 工作台，数据存你电脑上，模型跑你电脑上，<u>所有能力都是为辅导员的真实工作量身打造</u>。</p>
+  </div>
+</div></section>
+
+<!-- 定位：不是学校系统，是私人助手 -->
+<section id="position"><div class="wrap">
+  <div class="s-head reveal">
+    <div class="s-eyebrow">YOUR OWN TOOL</div>
+    <h2>不是学校系统，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">是辅导员自己的助手</span></h2>
+    <p>学校系统管流程与归档；它管你每天的工作效率——不冲突，能互补。</p>
+  </div>
+  <div class="pos-divider rv">
+    <div class="pos-side pos-school reveal" style="--d:0s">
+      <div class="pos-ic">🏫</div>
+      <h4>学校学工系统</h4>
+      <p>全校一个平台，流程归学校、数据归学校，改个字段要审批。</p>
+    </div>
+    <div class="pos-vs reveal" style="--d:.06s">VS</div>
+    <div class="pos-side pos-mine reveal" style="--d:.1s">
+      <div class="pos-ic">🧑‍🏫</div>
+      <h4>你的私人助手</h4>
+      <p>装在你电脑上，数据不出这台机器。班级怎么管你说了算，AI 随叫随到。</p>
+    </div>
   </div>
 </div></section>
 
