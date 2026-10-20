@@ -180,7 +180,7 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 .card p{font-size:13.5px;color:var(--ink2)}
 
 /* 模型 */
-.models{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;perspective:1200px}
+.models{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;perspective:1200px;max-width:860px;margin:0 auto}
 .model{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;position:relative;overflow:hidden;backdrop-filter:blur(8px);box-shadow:var(--shadow-soft);transform-style:preserve-3d;will-change:transform;transition:border-color .25s,transform .18s}
 .model:hover{border-color:rgba(22,119,255,.5);box-shadow:0 22px 48px rgba(16,88,180,.16)}
 .model .band{position:absolute;top:0;left:0;right:0;height:4px;background:var(--gradbtn);opacity:.9;box-shadow:0 0 16px rgba(56,189,248,.7)}
@@ -196,7 +196,7 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 .model .pick{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--brand);font-weight:700}
 
 /* 档位 */
-.tiers{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;perspective:1400px;align-items:stretch}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;perspective:1400px;align-items:stretch}
 .tier{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px 18px 20px;text-align:center;backdrop-filter:blur(8px);box-shadow:var(--shadow-soft);transition:transform .18s,box-shadow .25s,border-color .25s;transform-style:preserve-3d;will-change:transform;position:relative;display:flex;flex-direction:column}
 .tier:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(16,88,180,.18);border-color:rgba(22,119,255,.5)}
 .tier--featured{border-color:rgba(22,119,255,.2)}
@@ -216,7 +216,7 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 .cmp thead th:first-child{background:#eef4ff}
 .cmp tbody tr:nth-child(even) td:first-child{background:#f5faff}
 .cmp tbody tr:hover td:first-child{background:#e9f2ff}
-.cmp th:not(:first-child),.cmp td:not(:first-child){width:11.6%}
+.cmp th:not(:first-child),.cmp td:not(:first-child){width:14.5%}
 .cmp thead th{background:rgba(22,119,255,.06);color:#1e3a6e;font-weight:700;white-space:nowrap;cursor:default;position:relative;font-size:13.5px}
 .cmp thead th:first-child{border-top-left-radius:12px}
 .cmp thead th:last-child{border-top-right-radius:12px}
@@ -229,7 +229,6 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 .cmp .grp-basic{background:#eef2ff;color:#4338ca}
 .cmp .grp-std{background:#ecfdf5;color:#047857}
 .cmp .grp-pro{background:#fff7ed;color:#c2410c}
-.cmp .grp-team{background:#faf5ff;color:#7c3aed}
 .cmp .grp-flag{background:#fef2f2;color:#dc2626}
 .cmp .yes{color:#10b981;font-weight:800;font-size:15px}
 .cmp .lvl{color:var(--brand);font-weight:700;white-space:nowrap;font-size:12.5px}
@@ -421,7 +420,7 @@ footer a:hover{transform:translateY(-2px)}
     </div>
     <div class="hero-stats reveal">
       <div class="stat"><b data-n="32">32</b><span>功能模块</span></div>
-      <div class="stat"><b data-n="5">5</b><span>授权档位</span></div>
+      <div class="stat"><b data-n="4">4</b><span>授权档位</span></div>
       <div class="stat"><b data-n="100" data-suffix="%">100%</b><span>离线运行</span></div>
       <div class="stat"><b data-n="0">0</b><span>数据上传</span></div>
     </div>
@@ -530,25 +529,19 @@ footer a:hover{transform:translateY(-2px)}
 <section id="models"><div class="wrap">
   <div class="s-head reveal">
     <div class="s-eyebrow">LOCAL LLM</div>
-    <h2>本地大模型，三档自选</h2>
+    <h2>本地大模型，两档自选</h2>
     <p>模型按需下载，装好后完全离线。<b>选哪个档看你电脑配置</b>，内存越大、档位越高，回答质量越好。</p>
   </div>
   <div class="models rv">
     <div class="model tilt reveal" style="--d:0s"><div class="band"></div>
-      <h3>轻量档 <span class="m-name">Qwen2.5-0.5B</span></h3>
-      <div class="spec">约 469MB · 任意内存</div>
-      <div class="meter"><i style="width:34%" data-w="34%"></i></div>
-      <ul><li>叙述润色</li><li>开箱兜底档</li><li>适合低配置机器</li></ul>
-      <span class="pick">适合：先跑通基础</span>    </div>
-    <div class="model tilt reveal" style="--d:.08s"><div class="band"></div>
-      <h3>增强档 <span class="m-name">Qwen2.5-3B</span></h3>
-      <div class="spec">约 1.9GB · ≥8GB 内存</div>
+      <h3>增强档 <span class="m-name">Qwen3-4B-Instruct</span></h3>
+      <div class="spec">约 2.3GB · ≥8GB 内存</div>
       <div class="meter"><i data-w="66%"></i></div>
-      <ul><li>润色 + 规划 / 查询能力</li><li>能把问题拆成查询计划</li><li>推荐档</li></ul>
+      <ul><li>润色 + 规划 / 查询能力</li><li>Qwen3 原生 32K 上下文、带思考模式</li><li>推荐档</li></ul>
       <span class="pick">适合：日常够用</span>
     </div>
     <div class="model tilt reveal" style="--d:.16s"><div class="band"></div>
-      <h3>强力档 <span class="m-name">Qwen2.5-7B</span></h3>
+      <h3>强力档 <span class="m-name">Qwen3-8B-Instruct</span></h3>
       <div class="spec">约 4.7GB · ≥16GB 内存</div>
       <div class="meter"><i data-w="100%"></i></div>
       <ul><li>推理能力最强</li><li>复杂问题分步思考、多步查数据</li><li>长查询链 / 复杂写操作</li></ul>
@@ -573,7 +566,7 @@ footer a:hover{transform:translateY(-2px)}
     <div class="why-card reveal" style="--d:.08s">
       <div class="why-num">02</div>
       <h4>AI 也不联网</h4>
-      <p>市面上的 AI 工具都要把数据传到云端才能用。辅导员工作平台用 <b>Qwen2.5 本地大模型</b>，所有推理在你电脑上完成，一句话都不会外传。</p>
+      <p>市面上的 AI 工具都要把数据传到云端才能用。辅导员工作平台用 <b>Qwen3 本地大模型</b>，所有推理在你电脑上完成，一句话都不会外传。</p>
     </div>
     <div class="why-card reveal" style="--d:.16s">
       <div class="why-num">03</div>
@@ -644,9 +637,8 @@ footer a:hover{transform:translateY(-2px)}
   <div class="tiers rv">
     <div class="tier tilt reveal" style="--d:0s"><div class="flag">免费</div><h4>基础版</h4><div class="id">basic</div><div class="role">32 个模块全开，不是 Demo。档案、记录、统计、预警、备份恢复，日常管理够用。</div><span class="best">免费 · 永久</span></div>
     <div class="tier tier--featured tilt reveal" style="--d:.06s"><div class="flag">热门</div><h4>标准版</h4><div class="id">standard</div><div class="role">AI 查数据 + 政策语义检索 + HTML 报告 + 学生画像 + 自动采集。大多数辅导员选这档。</div><span class="best">性价比最高</span></div>
-    <div class="tier tilt reveal" style="--d:.12s"><div class="flag">AI 进阶</div><h4>专业版</h4><div class="id">pro</div><div class="role">7B 大模型 + AI 一句话写改数据 + 批量操作 + Word 导出。AI 深度用户的选择。</div><span class="best">AI 更强大</span></div>
-    <div class="tier tilt reveal" style="--d:.18s"><div class="flag">多人</div><h4>团队版</h4><div class="id">team</div><div class="role">专业版全功能 + 局域网同步 + 移动端收集 + 班干部账号。年级组 / 学工办多人协作。</div><span class="best">多机共享</span></div>
-    <div class="tier tilt reveal" style="--d:.24s"><div class="flag">校级</div><h4>旗舰版</h4><div class="id">flagship</div><div class="role">团队版 + 校内集中部署 + 学校自管本地大模型 + 定制开发。面向全校的完整方案。</div><span class="best">定制方案</span></div>
+    <div class="tier tilt reveal" style="--d:.12s"><div class="flag">协作</div><h4>专业版</h4><div class="id">pro</div><div class="role">标准版全部能力 + 局域网同步 + 班干部受限账号 + 手机移动端。年级组 / 学工办多人协作。</div><span class="best">多人协作</span></div>
+    <div class="tier tilt reveal" style="--d:.18s"><div class="flag">校级</div><h4>旗舰版</h4><div class="id">flagship</div><div class="role">专业版 + 校内集中部署 + 学校自管本地大模型 + 定制开发。面向全校的完整方案。</div><span class="best">定制方案</span></div>
   </div>
 </div></section>
 
@@ -654,43 +646,43 @@ footer a:hover{transform:translateY(-2px)}
 <section id="compare"><div class="wrap">
   <div class="s-head reveal">
     <div class="s-eyebrow">COMPARISON</div>
-    <h2>五档功能对比</h2>
+    <h2>四档功能对比</h2>
     <p>✓ = 完整支持；"—" = 不含；"关键词 / 手动 / 基础" = 以简化形式提供。数据量不分档，升级零迁移。</p>
   </div>
   <div class="cmp-wrap reveal">
   <table class="cmp" id="cmp">
     <thead><tr>
-      <th style="text-align:left">功能</th><th data-c="0">基础版</th><th data-c="1">标准版</th><th data-c="2">专业版</th><th data-c="3">团队版</th><th data-c="4">旗舰版</th>
+      <th style="text-align:left">功能</th><th data-c="0">基础版</th><th data-c="1">标准版</th><th data-c="2">专业版</th><th data-c="3">旗舰版</th>
     </tr></thead>
-    <tbody>
+        <tbody>
       <!-- 全部版本都有 -->
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>学生档案 / 记录 / 导出 / 备份恢复</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>数据统计 / 学业预警</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>AI 助手问答</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>操作日志</td><td class="lvl">基础</td><td class="lvl">完整</td><td class="lvl">完整</td><td class="lvl">完整</td><td class="lvl">完整</td></tr>
+      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>学生档案 / 记录 / 导出 / 备份恢复</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>数据统计 / 学业预警</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>操作日志</td><td class="lvl">基础</td><td class="lvl">完整</td><td class="lvl">完整</td><td class="lvl">完整</td></tr>
       <!-- 标准版及以上 -->
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>聚合查询（跨班 / 跨人比较）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>HTML 报告（带卡片可打印）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>智能推荐问法</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>选中问 AI / 精准跳转</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>学生画像页 / 风险雷达</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>政策文件库 + 语义检索</td><td class="lvl">关键词</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>政策自动采集</td><td class="lvl">手动</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>自动更新</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>AI 助手问答</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>聚合查询（跨班 / 跨人比较）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>HTML 报告（带卡片可打印）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>智能推荐问法</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>选中问 AI / 精准跳转</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>学生画像页 / 风险雷达</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>政策文件库 + 语义检索</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>政策自动采集</td><td class="lvl">手动</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>自然语言写改（一句话录 / 改数据）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>本地模型可选档位</td><td class="no">—</td><td class="lvl">4B / 8B</td><td class="lvl">4B / 8B</td><td class="lvl">学校自管</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>自动更新</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
       <!-- 专业版及以上 -->
-      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>自然语言写改（一句话录 / 改数据）</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>本地模型可选档位</td><td class="lvl">0.5B</td><td class="lvl">3B</td><td class="lvl">3 档全开</td><td class="lvl">3 档全开</td><td class="lvl">学校自管</td></tr>
-      <!-- 团队版及以上 -->
-      <tr><td class="row-name"><span class="grp grp-team">团队版+</span>局域网数据同步</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-team">团队版+</span>班干部受限角色</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>局域网数据同步</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>班干部受限角色</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>手机移动端</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
       <!-- 旗舰版专属 -->
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>校内集中部署</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>学校自管本地大模型服务</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>多学院 / 校级数据看板</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>定制化功能开发</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>专属技术支持与培训</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>校内集中部署</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>学校自管本地大模型服务</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>多学院 / 校级数据看板</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>定制化功能开发</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>专属技术支持与培训</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
     </tbody>
-    <tfoot><tr><td colspan="6">档位功能来自产品真实开关表（featureFlags.js）；本地模型可选档位由授权决定，具体使用哪档看电脑配置。高版本包含低版本全部功能。</td></tr></tfoot>
+    <tfoot><tr><td colspan="5">档位功能来自产品真实开关表（featureFlags.js）；本地模型可选档位由授权决定，具体使用哪档看电脑配置。高版本包含低版本全部功能。</td></tr></tfoot>
   </table>
   </div>
 </div></section>
@@ -708,9 +700,9 @@ footer a:hover{transform:translateY(-2px)}
     <div class="step reveal" style="--d:.16s"><div class="n">STEP 3</div><h3>升级档位</h3><p>想升更高档，联系开发者重发一个更高档激活码，应用内重新激活即可覆盖。</p></div>
   </div>
   <div class="faq">
-    <div class="qa reveal"><h4>激活码能多台电脑用吗？</h4><p class="a">激活码会绑定第一台激活它的设备。团队版按席位授权，每个席位一个码，各自绑定各自机器。</p></div>
+    <div class="qa reveal"><h4>激活码能多台电脑用吗？</h4><p class="a">激活码会绑定第一台激活它的设备。专业版、旗舰版按席位授权，每个席位一个码，各自绑定各自机器。</p></div>
     <div class="qa reveal"><h4>过期了 / 重装系统怎么办？</h4><p class="a">激活码含有效期，到期需续发；重装系统后在同一台机器可用原码重新激活（老授权兼容）。</p></div>
-    <div class="qa reveal"><h4>AI 回答要更好，选哪一档模型？</h4><p class="a">模型档（0.5B / 3B / 7B）与授权档是两套：模型看内存，授权看购买。要复杂推理用 7B 档模型，需专业版及以上授权。</p></div>
+    <div class="qa reveal"><h4>AI 回答要更好，选哪一档模型？</h4><p class="a">模型档（4B / 8B）与授权档是两套：模型看内存，授权看购买。要复杂推理用 8B（强力档）模型，标准版及以上授权都能下载。</p></div>
   </div>
 </div></section>
 
@@ -741,7 +733,7 @@ footer a:hover{transform:translateY(-2px)}
 
 <footer>
   <div class="row">
-    <span>辅导员工作平台 · v2.3.0</span>
+    <span>辅导员工作平台 · v2.8.0</span>
     <a href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">更新与版本</a>
     <a href="#tiers">授权档位</a>
     <a href="#compare">功能对比</a>
