@@ -84,9 +84,9 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
 .hero h1{font-size:66px;line-height:1.05;font-weight:800;letter-spacing:-1.5px;margin:26px 0 0;color:var(--ink)}
 .hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 26px rgba(22,119,255,.25))}
-.hero .sub{margin:22px auto 0;max-width:660px;font-size:18px;color:var(--ink2)}
+.hero .sub{margin:22px auto 0;max-width:720px;font-size:16px;color:var(--ink2)}
 .hero .sub b{color:var(--ink);font-weight:600}
-.type-line{margin-top:18px;font-size:15.5px;color:var(--ink2);display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
+.type-line{margin-top:44px;font-size:15.5px;color:var(--ink2);display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
 .type-line .w{color:var(--brand);font-weight:700;text-shadow:0 0 20px rgba(22,119,255,.3)}
 .type-cursor{display:inline-block;width:2px;height:18px;background:var(--brand);margin-left:3px;animation:blink 1s steps(2) infinite}
 @keyframes blink{50%{opacity:0}}
@@ -99,7 +99,7 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 .stat span{font-size:12.5px;color:var(--ink3)}
 
 /* ===== Hero 产品模型窗口（今日概览 · AI 数据大屏） ===== */
-.stage{position:relative;z-index:2;margin:54px auto 0;max-width:880px;perspective:1400px}
+.stage{position:relative;z-index:2;margin:28px auto 0;max-width:880px;perspective:1400px}
 .win{position:relative;border-radius:22px;border:1px solid rgba(22,119,255,.16);background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.7));backdrop-filter:blur(14px);box-shadow:0 40px 80px rgba(16,88,180,.2),inset 0 1px 0 rgba(255,255,255,.9);overflow:hidden;transform-style:preserve-3d;will-change:transform}
 .win-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(22,119,255,.03)}
 .win-bar i{width:11px;height:11px;border-radius:50%}
@@ -432,7 +432,6 @@ footer a:hover{transform:translateY(-2px)}
     <h1 class="reveal">辅导员专用<br /><span class="g">离线 AI 工作台</span></h1>
     <p class="sub reveal"><b>问一句话，AI 帮你查、帮你算、帮你写</b>。模型跑在你自己电脑上，学生数据<u>永远不出这台机器</u>。</p>
     <p class="hero-pos reveal">不是学校系统，是你自己的私人助手——<u>数据在你手里，用法你说了算</u>。</p>
-    <div class="type-line reveal"><span>直接问：</span><span class="w" id="typeword"></span><span class="type-cursor"></span></div>
     <div class="cta reveal">
       <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">下载安装包 · 免费</a>
       <a class="btn btn--ghost" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">查看版本与更新</a>
@@ -443,6 +442,7 @@ footer a:hover{transform:translateY(-2px)}
       <div class="stat"><b data-n="100" data-suffix="%">100%</b><span>离线运行</span></div>
       <div class="stat"><b data-n="0">0</b><span>数据上传</span></div>
     </div>
+    <div class="type-line reveal"><span>直接问：</span><span class="w" id="typeword"></span><span class="type-cursor"></span></div>
   </div>
 
   <!-- 产品模型窗口：工作台 · AI 数据大屏 -->
@@ -524,28 +524,6 @@ footer a:hover{transform:translateY(-2px)}
   <div class="pain-solution reveal">
     <span class="arrow">→</span>
     <p><b>辅导员工作平台</b> 就是为了解决这些问题而做的。<br />一个本地运行的 AI 工作台，数据存你电脑上，模型跑你电脑上，<u>所有能力都是为辅导员的真实工作量身打造</u>。</p>
-  </div>
-</div></section>
-
-<!-- 定位：不是学校系统，是私人助手 -->
-<section id="position"><div class="wrap">
-  <div class="s-head reveal">
-    <div class="s-eyebrow">YOUR OWN TOOL</div>
-    <h2>不是学校系统，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">是辅导员自己的助手</span></h2>
-    <p>学校系统管流程与归档；它管你每天的工作效率——不冲突，能互补。</p>
-  </div>
-  <div class="pos-divider rv">
-    <div class="pos-side pos-school reveal" style="--d:0s">
-      <div class="pos-ic">🏫</div>
-      <h4>学校学工系统</h4>
-      <p>全校一个平台，流程归学校、数据归学校，改个字段要审批。</p>
-    </div>
-    <div class="pos-vs reveal" style="--d:.06s">VS</div>
-    <div class="pos-side pos-mine reveal" style="--d:.1s">
-      <div class="pos-ic">🧑‍🏫</div>
-      <h4>你的私人助手</h4>
-      <p>装在你电脑上，数据不出这台机器。班级怎么管你说了算，AI 随叫随到。</p>
-    </div>
   </div>
 </div></section>
 
@@ -725,6 +703,28 @@ footer a:hover{transform:translateY(-2px)}
     </tbody>
     <tfoot><tr><td colspan="5">档位功能来自产品真实开关表（featureFlags.js）；本地模型可选档位由授权决定，具体使用哪档看电脑配置。高版本包含低版本全部功能。</td></tr></tfoot>
   </table>
+  </div>
+</div></section>
+
+<!-- 定位：不是学校系统，是私人助手 -->
+<section id="position"><div class="wrap">
+  <div class="s-head reveal">
+    <div class="s-eyebrow">YOUR OWN TOOL</div>
+    <h2>不是学校系统，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">是辅导员自己的助手</span></h2>
+    <p>学校系统管流程与归档；它管你每天的工作效率——不冲突，能互补。</p>
+  </div>
+  <div class="pos-divider rv">
+    <div class="pos-side pos-school reveal" style="--d:0s">
+      <div class="pos-ic">🏫</div>
+      <h4>学校学工系统</h4>
+      <p>全校一个平台，流程归学校、数据归学校，改个字段要审批。</p>
+    </div>
+    <div class="pos-vs reveal" style="--d:.06s">VS</div>
+    <div class="pos-side pos-mine reveal" style="--d:.1s">
+      <div class="pos-ic">🧑‍🏫</div>
+      <h4>你的私人助手</h4>
+      <p>装在你电脑上，数据不出这台机器。班级怎么管你说了算，AI 随叫随到。</p>
+    </div>
   </div>
 </div></section>
 
