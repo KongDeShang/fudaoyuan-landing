@@ -214,7 +214,7 @@ section{scroll-margin-top:78px;position:relative;padding:96px 0}
 .model .pick{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--brand);font-weight:700}
 
 /* 档位 */
-.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;perspective:1400px;align-items:stretch}
+.tiers{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;perspective:1400px;align-items:stretch}
 .tier{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px 18px 20px;text-align:center;backdrop-filter:blur(8px);box-shadow:var(--shadow-soft);transition:transform .18s,box-shadow .25s,border-color .25s;transform-style:preserve-3d;will-change:transform;position:relative;display:flex;flex-direction:column}
 .tier:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(16,88,180,.18);border-color:rgba(22,119,255,.5)}
 .tier--featured{border-color:rgba(22,119,255,.2)}
@@ -433,12 +433,13 @@ footer a:hover{transform:translateY(-2px)}
     <p class="sub reveal"><b>问一句话，AI 帮你查、帮你算、帮你写</b>。模型跑在你自己电脑上，学生数据<u>永远不出这台机器</u>。</p>
     <p class="hero-pos reveal">不是学校系统，是你自己的私人助手——<u>数据在你手里，用法你说了算</u>。</p>
     <div class="cta reveal">
-      <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">下载安装包 · 免费</a>
+      <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">下载安装包 · 装时选角色</a>
       <a class="btn btn--ghost" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">查看版本与更新</a>
     </div>
+    <div class="type-line reveal" style="margin-top:14px">一个安装包，安装时选择「辅导员工作平台」或「班干部工作平台」——装后各自独立数据与更新。</div>
     <div class="hero-stats reveal">
-      <div class="stat"><b data-n="32">32</b><span>功能模块</span></div>
-      <div class="stat"><b data-n="4">4</b><span>授权档位</span></div>
+      <div class="stat"><b data-n="33">33</b><span>功能模块</span></div>
+      <div class="stat"><b data-n="2">2</b><span>授权档位</span></div>
       <div class="stat"><b data-n="100" data-suffix="%">100%</b><span>离线运行</span></div>
       <div class="stat"><b data-n="0">0</b><span>数据上传</span></div>
     </div>
@@ -478,8 +479,8 @@ footer a:hover{transform:translateY(-2px)}
 
 <!-- 跑马灯 -->
 <div class="marquee"><div class="track" id="mq">
-    <span>本地大模型</span><span>离线运行</span><span>32个功能模块</span><span>学业预警</span><span>谈心谈话</span><span>学生档案</span><span>政策检索</span><span>自动采集</span><span>AI助手</span><span>数据加密</span><span>数据不出电脑</span><span>辅导员专用</span>
-    <span>本地大模型</span><span>离线运行</span><span>32个功能模块</span><span>学业预警</span><span>谈心谈话</span><span>学生档案</span><span>政策检索</span><span>自动采集</span><span>AI助手</span><span>数据加密</span><span>数据不出电脑</span><span>辅导员专用</span>
+    <span>本地大模型</span><span>离线运行</span><span>33个功能模块</span><span>学业预警</span><span>谈心谈话</span><span>学生档案</span><span>政策检索</span><span>自动采集</span><span>AI助手</span><span>数据加密</span><span>数据不出电脑</span><span>辅导员专用</span>
+    <span>本地大模型</span><span>离线运行</span><span>33个功能模块</span><span>学业预警</span><span>谈心谈话</span><span>学生档案</span><span>政策检索</span><span>自动采集</span><span>AI助手</span><span>数据加密</span><span>数据不出电脑</span><span>辅导员专用</span>
   </div></div>
 
 <!-- 痛点共鸣 -->
@@ -532,7 +533,7 @@ footer a:hover{transform:translateY(-2px)}
   <div class="s-head reveal">
     <div class="s-eyebrow">CORE ABILITIES</div>
     <h2>一个工作台，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">管住辅导员的全部日常</span></h2>
-    <p>32 个功能模块覆盖学生工作全场景。规则引擎秒回、本地模型思考——<b>每一步计算都留下真实足迹，复杂问题还会分步想、分步查</b>，看得见依据、可追溯。</p>
+    <p>33 个功能模块覆盖学生工作全场景。规则引擎秒回、本地模型思考——<b>每一步计算都留下真实足迹，复杂问题还会分步想、分步查</b>，看得见依据、可追溯。</p>
   </div>
   <div class="feat rv">
     <div class="card tilt reveal" style="--d:0s"><div class="ic">🧮</div><h3>数据统计 · 一键出结果</h3><p>成绩排名、绩点分析、出勤统计、就业落实率……<b>点一下就算好</b>，支持图表可视化、可导出、可存档，不用再手动扒 Excel。</p></div>
@@ -654,10 +655,8 @@ footer a:hover{transform:translateY(-2px)}
     <p>激活码按档位签发，高版本包含低版本的全部功能。买哪档、发哪档的码。</p>
   </div>
   <div class="tiers rv">
-    <div class="tier tilt reveal" style="--d:0s"><div class="flag">免费</div><h4>基础版</h4><div class="id">basic</div><div class="role">32 个模块全开，不是 Demo。档案、记录、统计、预警、备份恢复，日常管理够用。</div><span class="best">免费 · 永久</span></div>
-    <div class="tier tier--featured tilt reveal" style="--d:.06s"><div class="flag">热门</div><h4>标准版</h4><div class="id">standard</div><div class="role">AI 查数据 + 政策语义检索 + HTML 报告 + 学生画像 + 自动采集。大多数辅导员选这档。</div><span class="best">性价比最高</span></div>
-    <div class="tier tilt reveal" style="--d:.12s"><div class="flag">协作</div><h4>专业版</h4><div class="id">pro</div><div class="role">标准版全部能力 + 局域网同步 + 班干部受限账号 + 手机移动端。年级组 / 学工办多人协作。</div><span class="best">多人协作</span></div>
-    <div class="tier tilt reveal" style="--d:.18s"><div class="flag">校级</div><h4>旗舰版</h4><div class="id">flagship</div><div class="role">专业版 + 校内集中部署 + 学校自管本地大模型 + 定制开发。面向全校的完整方案。</div><span class="best">定制方案</span></div>
+    <div class="tier tilt reveal" style="--d:0s"><div class="flag">免费</div><h4>基础版</h4><div class="id">basic</div><div class="role">33 个模块全开，不是 Demo。档案、记录、统计、预警、备份恢复，日常管理够用。</div><span class="best">免费 · 永久</span></div>
+    <div class="tier tier--featured tilt reveal" style="--d:.06s"><div class="flag">热门</div><h4>标准版</h4><div class="id">standard</div><div class="role">基础版全部能力 + AI 问答与聚合查询 + 政策语义检索 + 学生画像 + 班级评议总览 + 协作与校内部署等满血能力。大多数用户选这档。</div><span class="best">性价比最高</span></div>
   </div>
 </div></section>
 
@@ -665,43 +664,37 @@ footer a:hover{transform:translateY(-2px)}
 <section id="compare"><div class="wrap">
   <div class="s-head reveal">
     <div class="s-eyebrow">COMPARISON</div>
-    <h2>四档功能对比</h2>
+    <h2>两档功能对比</h2>
     <p style="font-size:15px">✓ = 完整支持；"—" = 不含；"关键词 / 手动 / 基础" = 以简化形式提供。数据量不分档，升级零迁移。</p>
   </div>
   <div class="cmp-wrap reveal">
   <table class="cmp" id="cmp">
     <thead><tr>
-      <th style="text-align:left">功能</th><th data-c="0">基础版</th><th data-c="1">标准版</th><th data-c="2">专业版</th><th data-c="3">旗舰版</th>
+      <th style="text-align:left">功能</th><th data-c="0">基础版</th><th data-c="1">标准版</th>
     </tr></thead>
         <tbody>
       <!-- 全部版本都有 -->
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>学生档案 / 记录 / 导出 / 备份恢复</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>数据统计 / 学业预警</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>操作日志</td><td class="lvl">基础</td><td class="lvl">完整</td><td class="lvl">完整</td><td class="lvl">完整</td></tr>
-      <!-- 标准版及以上 -->
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>AI 助手问答</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>聚合查询（跨班 / 跨人比较）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>HTML 报告（带卡片可打印）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>智能推荐问法</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>选中问 AI / 精准跳转</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>学生画像页 / 风险雷达</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>政策文件库 + 语义检索</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>政策自动采集</td><td class="lvl">手动</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>自然语言写改（一句话录 / 改数据）</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>本地模型可选档位</td><td class="no">—</td><td class="lvl">4B / 8B</td><td class="lvl">4B / 8B</td><td class="lvl">学校自管</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版+</span>自动更新</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <!-- 专业版及以上 -->
-      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>局域网数据同步</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>班干部受限角色</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-pro">专业版+</span>手机移动端</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <!-- 旗舰版专属 -->
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>校内集中部署</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>学校自管本地大模型服务</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>多学院 / 校级数据看板</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>定制化功能开发</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-flag">旗舰版</span>专属技术支持与培训</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>学生档案 / 记录 / 导出 / 备份恢复</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>数据统计 / 学业预警</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>操作日志</td><td class="lvl">基础</td><td class="lvl">完整</td></tr>
+      <!-- 标准版 -->
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>AI 助手问答</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>聚合查询（跨班 / 跨人比较）</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>HTML 报告（带卡片可打印）</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>智能推荐问法</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>选中问 AI / 精准跳转</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>学生画像页 / 风险雷达</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>政策文件库 + 语义检索</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>政策自动采集</td><td class="lvl">手动</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>自然语言写改（一句话录 / 改数据）</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>班级评议总览 / 记录详情</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>本地模型可选档位</td><td class="no">—</td><td class="lvl">4B / 8B</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>自动更新</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>局域网数据同步（待开放）</td><td class="no">—</td><td class="lvl">规划中</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>手机移动端</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td class="row-name"><span class="grp grp-std">标准版</span>校内自部署模型</td><td class="no">—</td><td class="yes">✓</td></tr>
     </tbody>
-    <tfoot><tr><td colspan="5">档位功能来自产品真实开关表（featureFlags.js）；本地模型可选档位由授权决定，具体使用哪档看电脑配置。高版本包含低版本全部功能。</td></tr></tfoot>
+    <tfoot><tr><td colspan="3">档位功能来自产品真实开关表（featureFlags.js）；本地模型可选档位由授权决定，具体使用哪档看电脑配置。高版本包含低版本全部功能。</td></tr></tfoot>
   </table>
   </div>
 </div></section>
@@ -741,7 +734,7 @@ footer a:hover{transform:translateY(-2px)}
     <div class="step reveal" style="--d:.16s"><div class="n">STEP 3</div><h3>升级档位</h3><p>想升更高档，联系开发者重发一个更高档激活码，应用内重新激活即可覆盖。</p></div>
   </div>
   <div class="faq">
-    <div class="qa reveal"><h4>激活码能多台电脑用吗？</h4><p class="a">激活码会绑定第一台激活它的设备。专业版、旗舰版按席位授权，每个席位一个码，各自绑定各自机器。</p></div>
+    <div class="qa reveal"><h4>激活码能多台电脑用吗？</h4><p class="a">激活码会绑定第一台激活它的设备。标准版按席位授权，每个席位一个码，各自绑定各自机器。</p></div>
     <div class="qa reveal"><h4>过期了 / 重装系统怎么办？</h4><p class="a">激活码含有效期，到期需续发；重装系统后在同一台机器可用原码重新激活（老授权兼容）。</p></div>
     <div class="qa reveal"><h4>AI 回答要更好，选哪一档模型？</h4><p class="a">模型档（4B / 8B）与授权档是两套：模型看内存，授权看购买。要复杂推理用 8B（强力档）模型，标准版及以上授权都能下载。</p></div>
     <div class="qa reveal"><h4>这和学校的学生管理系统冲突吗？</h4><p class="a">不冲突。它是辅导员个人的辅助工具：不接学校系统、不占用学校账号、不上传任何数据，数据只存在你电脑上。学校系统管全校的归档与流程，它管你每天的工作效率——两个可以同时用，互补不替代。</p></div>
@@ -751,7 +744,7 @@ footer a:hover{transform:translateY(-2px)}
 <!-- CTA -->
 <section><div class="wrap"><div class="cta-card reveal">
   <h2>免费下载，开箱即用</h2>
-  <p>基础版永久免费，32 个功能模块全开。<b>离线 · 不采集 · 数据永远在你自己电脑上。</b><br />下载即用，先跑通日常；再按需下载本地模型，把 AI 助手用起来。</p>
+  <p>基础版永久免费，33 个功能模块全开。<b>离线 · 不采集 · 数据永远在你自己电脑上。</b><br />下载即用，先跑通日常；再按需下载本地模型，把 AI 助手用起来。</p>
   <div class="cta-actions">
     <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">⬇ 下载安装包</a>
     <a class="btn" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">查看版本更新</a>
@@ -766,7 +759,7 @@ footer a:hover{transform:translateY(-2px)}
       <h3>从一线需求里长出来的工具</h3>
       <p>辅导员工作平台由石家庄铁道大学机械工程学院 <b>孔德尚</b>（学生干部 / 项目开发者）牵头开发，辅导员 <b>苏康</b> 老师全程参与需求打磨与功能设计。</p>
       <p>项目从真实的学工场景出发：数据散在各个 Excel 里不好查、政策文件找起来麻烦、AI 工具不敢碰学生数据…… 这些都是辅导员日常工作中实实在在的痛点。</p>
-      <p>于是我们认真把它做成了一个完整的产品：32 个功能模块、本地大模型、政策智库、加密备份…… 所有功能都围绕一个原则 —— <b>数据存本地，安全是底线</b>。</p>
+      <p>于是我们认真把它做成了一个完整的产品：33 个功能模块、本地大模型、政策智库、加密备份…… 所有功能都围绕一个原则 —— <b>数据存本地，安全是底线</b>。</p>
       <p>如果你是辅导员，希望这个工具能帮你省点时间、少点重复劳动。有任何想法和建议，欢迎随时交流。</p>
       <div class="about-sign">— 孔德尚 · 石家庄铁道大学机械工程学院（项目开发者）</div>
     </div>
