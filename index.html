@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>辅导员工作平台 · 辅导员专用离线 AI 工作台</title>
-<meta name="description" content="辅导员工作平台：高校辅导员专用的本地 AI 工作台。数据统计、学生管理、学业预警、政策资料库、AI 全部本机运行，数据不出电脑。" />
+<title>教育工作台 · 辅导员与班委的离线工作平台</title>
+<meta name="description" content="教育工作台：高校辅导员与班委的离线工作平台。班级评议、材料凭证、学生档案、AI 统计问答全部本机运行，班委一键上交、辅导员逐项入库，数据不出电脑。" />
 <!--
   辅导员工作平台 · 推荐 / 下载 / 授权介绍页（蓝白高级版）
   单文件、零外部依赖：粒子星网 / 辉光跟随 / 磁性按钮 / 3D产品窗 / 打字机 / 数字滚动 / 滚动显现 / 跑马灯。
@@ -397,7 +397,50 @@ footer a:hover{transform:translateY(-2px)}
 
 /* 打字机光标 */
 .type-cursor::after{content:"|";animation:blink 1s step-end infinite;color:var(--brand);font-weight:300}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}</style>
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+/* ===== v3 新增组件样式（沿用蓝白体系） ===== */
+.win-tabs{display:flex;gap:8px;padding:10px 18px 0;background:rgba(22,119,255,.03)}
+.win-tab{border:1px solid var(--line);background:rgba(255,255,255,.7);color:var(--ink2);font-size:12.5px;font-weight:700;padding:6px 14px;border-radius:999px;cursor:pointer;transition:.2s}
+.win-tab.is-on{background:var(--gradbtn);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(22,119,255,.3)}
+.trial-badge{display:inline-block;margin-left:8px;padding:2px 10px;border-radius:999px;background:rgba(255,255,255,.22);font-size:11px;font-weight:700;letter-spacing:.05em}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:stretch;max-width:980px;margin:0 auto}
+.flow-step{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px 22px;backdrop-filter:blur(8px);box-shadow:var(--shadow-soft);position:relative}
+.flow-step .fn{display:inline-block;font-size:12px;font-weight:800;color:#fff;background:var(--gradbtn);border-radius:999px;padding:3px 12px;margin-bottom:12px;box-shadow:0 6px 16px rgba(22,119,255,.3)}
+.flow-step h4{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.flow-step p{font-size:13.5px;color:var(--ink2);line-height:1.7}
+.flow-arrow{align-self:center;justify-self:center;font-size:22px;color:var(--brand);opacity:.7}
+.flow-note{margin-top:26px;text-align:center;font-size:15.5px;color:var(--ink);font-weight:600}
+.flow-note b{color:var(--brand)}
+.roles-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:960px;margin:0 auto}
+.role-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;backdrop-filter:blur(8px);box-shadow:var(--shadow-soft);position:relative;overflow:hidden}
+.role-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gradbtn);opacity:.9}
+.role-card.cadre::before{background:linear-gradient(90deg,#10b981,#38bdf8)}
+.role-card h3{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:6px}
+.role-card .sub{font-size:12.5px;color:var(--ink3);margin-bottom:16px}
+.role-card ul{list-style:none}
+.role-card li{padding:7px 0;font-size:14px;color:var(--ink);display:flex;gap:9px;align-items:flex-start;border-top:1px dashed rgba(22,119,255,.16)}
+.role-card li::before{content:"✓";color:var(--teal);font-weight:700;flex:none}
+.roles-note{max-width:820px;margin:22px auto 0;text-align:center;font-size:13.5px;color:var(--ink3)}
+.pain-tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 9px;border-radius:6px;margin-bottom:6px;letter-spacing:.3px}
+.pain-tag.c{background:#eef4ff;color:#1677ff}
+.pain-tag.b{background:#ecfdf5;color:#047857}
+.trust-panel{max-width:860px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:34px 38px;backdrop-filter:blur(8px);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:8px 34px}
+.trust-panel .tr{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed rgba(22,119,255,.14)}
+.trust-panel .tr b{display:block;font-size:14.5px;color:var(--ink)}
+.trust-panel .tr span{font-size:12.5px;color:var(--ink2)}
+.trust-panel .tr .ic{font-size:19px;line-height:1.4}
+.honest-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
+.honest-col{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px 26px;backdrop-filter:blur(8px);box-shadow:var(--shadow-soft)}
+.honest-col h4{font-size:16px;font-weight:800;margin-bottom:12px;color:var(--ink);display:flex;align-items:center;gap:9px}
+.honest-col ul{list-style:none}
+.honest-col li{padding:6px 0;font-size:13.5px;color:var(--ink2);line-height:1.6}
+.honest-col li::before{content:"·";color:var(--brand);font-weight:800;margin-right:8px}
+.honest-col.yes{border-color:rgba(16,185,129,.35)}
+.honest-col.no{border-color:rgba(245,158,11,.35)}
+.honest-note{margin-top:20px;text-align:center;font-size:14px;color:var(--ink2);font-weight:600}
+.trial-line{margin-top:18px;text-align:center;font-size:14px;color:var(--brand);font-weight:700}
+@media (max-width:960px){.flow{grid-template-columns:1fr}.flow-arrow{transform:rotate(90deg)}.roles-grid,.honest-grid,.trust-panel{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="bg-aurora"></div>
@@ -405,14 +448,15 @@ footer a:hover{transform:translateY(-2px)}
 <div id="progress" style="position:fixed;top:0;left:0;height:3px;width:0;background:var(--gradbtn);z-index:99;box-shadow:0 0 14px rgba(22,119,255,.6)"></div>
 
 <nav class="nav" id="nav"><div class="wrap">
-  <div class="brand"><span class="logo">辅</span> 辅导员工作平台</div>
+  <div class="brand"><span class="logo">教</span> 教育工作台</div>
   <div class="nav-links">
-    <a class="navlink" href="#pain">痛点</a>
+    <a class="navlink" href="#flow">数据一条线</a>
+    <a class="navlink" href="#roles">两个平台</a>
     <a class="navlink" href="#features">能力</a>
-    <a class="navlink" href="#whylocal">为什么本地</a>
-    <a class="navlink" href="#models">本地模型</a>
+    <a class="navlink" href="#review">班级评议</a>
+    <a class="navlink" href="#ai">AI 与可信</a>
+    <a class="navlink" href="#security">安全</a>
     <a class="navlink" href="#tiers">授权档位</a>
-    <a class="navlink" href="#compare">功能对比</a>
     <a class="btn btn--primary" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">免费下载</a>
   </div>
 </div></nav>
@@ -428,15 +472,15 @@ footer a:hover{transform:translateY(-2px)}
   </div>
 
   <div class="hero-top">
-    <div class="kicker reveal"><span class="dot"></span>离线 · 本地大模型 · 数据不出这台电脑</div>
-    <h1 class="reveal">辅导员专用<br /><span class="g">离线 AI 工作台</span></h1>
-    <p class="sub reveal"><b>问一句话，AI 帮你查、帮你算、帮你写</b>。模型跑在你自己电脑上，学生数据<u>永远不出这台机器</u>。</p>
-    <p class="hero-pos reveal">不是学校系统，是你自己的私人助手——<u>数据在你手里，用法你说了算</u>。</p>
+    <div class="kicker reveal"><span class="dot"></span>离线 · 本地大模型 · 无账号 · 无遥测</div>
+    <h1 class="reveal">班里的事，班委记；<br /><span class="g">全年级的事，辅导员心里有数。</span></h1>
+    <p class="sub reveal">一个安装包，装下两个工作平台——<b>班委登记、打包上交，辅导员预览、批准入库</b>。评议、材料、成绩、谈话，全程在本机，数据只走一条线。</p>
+    <p class="hero-pos reveal">学校系统是档案馆，这是你的工作台——<u>一个管全校流程，一个管你们班的每一天</u>。</p>
     <div class="cta reveal">
-      <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">下载安装包 · 装时选角色</a>
+      <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">免费下载 · 装时选角色<span class="trial-badge">30 天标准版试用</span></a>
       <a class="btn btn--ghost" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">查看版本与更新</a>
     </div>
-    <div class="type-line reveal" style="margin-top:14px">一个安装包，安装时选择「辅导员工作平台」或「班干部工作平台」——装后各自独立数据与更新。</div>
+    <div class="type-line reveal" style="margin-top:14px">无需注册，下载即用；安装时选「辅导员工作平台」或「班委工作平台」，装后各自独立数据目录与更新源。</div>
     <div class="hero-stats reveal">
       <div class="stat"><b data-n="33">33</b><span>功能模块</span></div>
       <div class="stat"><b data-n="2">2</b><span>授权档位</span></div>
@@ -446,28 +490,46 @@ footer a:hover{transform:translateY(-2px)}
     <div class="type-line reveal"><span>直接问：</span><span class="w" id="typeword"></span><span class="type-cursor"></span></div>
   </div>
 
-  <!-- 产品模型窗口：工作台 · AI 数据大屏 -->
+  <!-- 产品模型窗口：双端演示（页签切换） -->
   <div class="stage reveal" id="stage">
-    <div class="float-chip fc1"><span class="gl"></span> 学业预警 · 实时</div>
-    <div class="float-chip fc2"><span class="gl"></span> 数据统计 · 一键</div>
-    <div class="float-chip fc3"><span class="gl"></span> 政策检索 · 可溯源</div>
+    <div class="float-chip fc1"><span class="gl"></span> 班级评议 · 一本账</div>
+    <div class="float-chip fc2"><span class="gl"></span> 数据统计 · 一条线</div>
+    <div class="float-chip fc3"><span class="gl"></span> 材料凭证 · 随记录走</div>
     <div class="win" id="win">
-      <div class="win-bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="addr">工作台 · AI 数据大屏</span></div>
+      <div class="win-bar"><i class="r"></i><i class="y"></i><i class="g"></i><span class="addr">工作台 · 双端演示</span></div>
+      <div class="win-tabs">
+        <button type="button" class="win-tab is-on" data-pane="pane-c">辅导员工作平台</button>
+        <button type="button" class="win-tab" data-pane="pane-b">班委工作平台</button>
+      </div>
       <div class="win-body">
         <div class="win-side">
-          <span class="si on">◆ 工作台</span><span class="si">👥 学生</span><span class="si">📊 数据统计</span><span class="si">📚 政策库</span><span class="si">⚙ 设置</span>
+          <span class="si on">◆ 工作台</span><span class="si">👥 学生</span><span class="si">🗳 评议</span><span class="si">📚 政策库</span><span class="si">⚙ 设置</span>
         </div>
         <div class="win-main">
-          <div class="kpi-row">
-            <div class="kpi"><b>137</b><span>今日待办</span></div>
-            <div class="kpi"><b>03</b><span>重点预警</span></div>
-            <div class="kpi"><b>2班</b><span>我的班级</span></div>
+          <div class="win-pane" id="pane-c">
+            <div class="kpi-row">
+              <div class="kpi"><b>3 班</b><span>待收材料</span></div>
+              <div class="kpi"><b>02</b><span>重点预警</span></div>
+              <div class="kpi"><b>4 班</b><span>我的班级</span></div>
+            </div>
+            <div class="chat-demo">
+              <div class="bubble ai">早，我来帮你盘点今天的班级情况。</div>
+              <div class="bubble me" id="demoQ">谁能查谁挂科最多？</div>
+              <div class="bubble ai" id="demoA"></div>
+              <div class="chat-input"><span class="ph" id="demoPh">问 AI，也查得到…</span><span class="go">发送</span></div>
+            </div>
           </div>
-          <div class="chat-demo">
-            <div class="bubble ai">早，我来帮你盘点今天的班级情况。</div>
-            <div class="bubble me" id="demoQ">谁能查谁挂科最多？</div>
-            <div class="bubble ai" id="demoA"></div>
-            <div class="chat-input"><span class="ph" id="demoPh">问 AI，也查得到…</span><span class="go">发送</span></div>
+          <div class="win-pane" id="pane-b" style="display:none">
+            <div class="kpi-row">
+              <div class="kpi"><b>42</b><span>本班人数</span></div>
+              <div class="kpi"><b>96%</b><span>本周考勤</span></div>
+              <div class="kpi"><b>3</b><span>待办</span></div>
+            </div>
+            <div class="chat-demo">
+              <div class="bubble ai">今天登记：查寝 42 人、谈话 2 条、班会照片 6 张。</div>
+              <div class="bubble me">评议材料还差 2 份证书，已提醒当事人。</div>
+              <div class="chat-input"><span class="ph">本班范围内问 AI…</span><span class="go">一键上交班级数据</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -479,69 +541,132 @@ footer a:hover{transform:translateY(-2px)}
 
 <!-- 跑马灯 -->
 <div class="marquee"><div class="track" id="mq">
-    <span>本地大模型</span><span>离线运行</span><span>33个功能模块</span><span>学业预警</span><span>谈心谈话</span><span>学生档案</span><span>政策检索</span><span>自动采集</span><span>AI助手</span><span>数据加密</span><span>数据不出电脑</span><span>辅导员专用</span>
-    <span>本地大模型</span><span>离线运行</span><span>33个功能模块</span><span>学业预警</span><span>谈心谈话</span><span>学生档案</span><span>政策检索</span><span>自动采集</span><span>AI助手</span><span>数据加密</span><span>数据不出电脑</span><span>辅导员专用</span>
+    <span>本地大模型</span><span>离线运行</span><span>33个功能模块</span><span>班级评议</span><span>材料凭证</span><span>数据一条线</span><span>班委登记辅导员汇总</span><span>AI 查数不猜</span><span>加密交接包</span><span>数据不出电脑</span><span>教育工作台</span>
+    <span>本地大模型</span><span>离线运行</span><span>33个功能模块</span><span>班级评议</span><span>材料凭证</span><span>数据一条线</span><span>班委登记辅导员汇总</span><span>AI 查数不猜</span><span>加密交接包</span><span>数据不出电脑</span><span>教育工作台</span>
   </div></div>
+
+<!-- 数据一条线 -->
+<section id="flow"><div class="wrap">
+  <div class="s-head reveal">
+    <div class="s-eyebrow">ONE LINE</div>
+    <h2>班里的数据，只有<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">一条正确的路</span></h2>
+    <p>班委当天记，打包就上交；辅导员先备份、再批准入库。全程在本机，谁也改不了谁的数据。</p>
+  </div>
+  <div class="flow">
+    <div class="flow-step tilt reveal" style="--d:0s"><span class="fn">01</span><h4>记在本班</h4><p>班委当天随手记：考勤、谈话、荣誉、班会，照片与证书随记录一起存。</p></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step tilt reveal" style="--d:.1s"><span class="fn">02</span><h4>打包上交</h4><p>一键生成 <b>.ewclass</b> 加密交接包：带清单、带校验和，缺什么当场知道。</p></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step tilt reveal" style="--d:.2s"><span class="fn">03</span><h4>辅导员入库</h4><p>先自动备份，再逐项预览、逐项批准，原子导入，不满意可整批撤销。</p></div>
+  </div>
+  <p class="flow-note">班委交什么、辅导员收什么，<b>两端各自确认，谁也改不了谁的数据</b>。</p>
+</div></section>
+
+<!-- 两个平台 -->
+<section id="roles"><div class="wrap">
+  <div class="s-head reveal">
+    <div class="s-eyebrow">TWO DESKS</div>
+    <h2>同一套功夫，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">两副正好合身的铠甲</span></h2>
+    <p>装的是同一个包，选的是不同的角色；数据目录分开、更新各自独立，互不打扰。</p>
+  </div>
+  <div class="roles-grid">
+    <div class="role-card tilt reveal" style="--d:0s">
+      <h3>辅导员工作平台</h3>
+      <div class="sub">数据汇总者 · 全校口径一张表</div>
+      <ul>
+        <li>管理多个班级，汇总全局数据</li>
+        <li>评议批次、材料凭证归档</li>
+        <li>接收班委上交，逐项把关</li>
+        <li>AI 跨班统计、写报告</li>
+        <li>全班数据一张表，随时导出</li>
+      </ul>
+    </div>
+    <div class="role-card cadre tilt reveal" style="--d:.1s">
+      <h3>班委工作平台</h3>
+      <div class="sub">执行者 · 班里的事当天了</div>
+      <ul>
+        <li>一个安装只绑定一个班</li>
+        <li>日常记录 + 照片凭证</li>
+        <li>一键上交，交没交清楚</li>
+        <li>本班范围内查、算、写</li>
+        <li>评议、综测材料按批收齐</li>
+      </ul>
+    </div>
+  </div>
+  <p class="roles-note">两个平台功能完整一致，差异只在“管几个班”和“数据往哪交”。</p>
+</div></section>
 
 <!-- 痛点共鸣 -->
 <section id="pain"><div class="wrap">
   <div class="s-head reveal">
     <div class="s-eyebrow">DO YOU RELATE</div>
-    <h2>辅导员的日常，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">是不是这样？</span></h2>
-    <p>表格满天飞、数据散各处、报表写不完、政策查不到、AI 工具不敢用……</p>
+    <h2>两边的日常，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">是不是这样？</span></h2>
+    <p>表格满天飞、材料收不齐、政策查不到、AI 工具不敢用……</p>
   </div>
   <div class="pain-grid rv">
-    <div class="pain-card reveal" style="--d:0s">
-      <div class="pain-ic">📊</div>
-      <h4>"数据都在 Excel 里，查起来太费劲"</h4>
-      <p>成绩表、考勤表、住宿表、贫困生名单……散落在十几个文件里，每次统计都要翻半天。</p>
-    </div>
-    <div class="pain-card reveal" style="--d:.07s">
-      <div class="pain-ic">🤖</div>
-      <h4>"想用 AI，但学生数据不敢上传"</h4>
-      <p>ChatGPT、文心一言效果是好，可学生信息、成绩、心理记录——谁敢往上传？</p>
-    </div>
-    <div class="pain-card reveal" style="--d:.14s">
-      <div class="pain-ic">📝</div>
-      <h4>"期末总结、谈话记录，写不完"</h4>
-      <p>几十上百个学生，每人的谈话记录、学业分析、学期鉴定，手写要写到什么时候？</p>
-    </div>
-    <div class="pain-card reveal" style="--d:.21s">
-      <div class="pain-ic">📚</div>
-      <h4>"政策文件堆成山，找的时候找不到"</h4>
-      <p>评优、资助、处分、就业……政策年年有更新，真要用的时候翻遍群文件也找不到。</p>
-    </div>
-    <div class="pain-card reveal" style="--d:.28s">
-      <div class="pain-ic">⚠️</div>
-      <h4>"谁在挂科、谁缺课多，全靠记忆"</h4>
-      <p>预警学生名单更新不及时，等发现的时候问题已经严重了，心里总觉得不踏实。</p>
-    </div>
-    <div class="pain-card reveal" style="--d:.35s">
-      <div class="pain-ic">🔐</div>
-      <h4>"数据安全是红线，出了事谁担得起"</h4>
-      <p>学生隐私、敏感数据，一旦泄露就是大事故。用云服务不放心，用工具又怕踩坑。</p>
-    </div>
+    <div class="pain-card reveal" style="--d:0s"><span class="pain-tag c">辅导员</span><div class="pain-ic">🗂</div><h4>"评议材料收不齐，归档要翻一年"</h4><p>证书照片散在聊天记录里，每次评优都像重新考古。</p></div>
+    <div class="pain-card reveal" style="--d:.07s"><span class="pain-tag c">辅导员</span><div class="pain-ic">📊</div><h4>"十几个班的数据，统计一次扒半天"</h4><p>成绩表、考勤表、贫困名单散在几十个 Excel 里。</p></div>
+    <div class="pain-card reveal" style="--d:.14s"><span class="pain-tag c">辅导员</span><div class="pain-ic">📚</div><h4>"政策文件堆成山，用的时候找不到"</h4><p>评优、资助、处分、就业……真要用时翻遍群文件。</p></div>
+    <div class="pain-card reveal" style="--d:.21s"><span class="pain-tag c">辅导员</span><div class="pain-ic">🔀</div><h4>"班委交上来的表，格式五花八门"</h4><p>每次收齐之后都要重新整理一遍，才算能用。</p></div>
+    <div class="pain-card reveal" style="--d:.28s"><span class="pain-tag b">班委</span><div class="pain-ic">📝</div><h4>"考勤、谈话全靠纸质本，期末对不上账"</h4><p>期末复盘时，本子上的字自己都认不全。</p></div>
+    <div class="pain-card reveal" style="--d:.35s"><span class="pain-tag b">班委</span><div class="pain-ic">📤</div><h4>"材料交给辅导员，谁交了谁没交说不清"</h4><p>群里接龙一条接一条，最后还得一个个私聊确认。</p></div>
+    <div class="pain-card reveal" style="--d:.42s"><span class="pain-tag b">班委</span><div class="pain-ic">🧮</div><h4>"算综测、写汇报，要手动翻记录"</h4><p>一学期的大事小事，最后变成一场回忆录。</p></div>
+    <div class="pain-card reveal" style="--d:.49s"><span class="pain-tag b">班委</span><div class="pain-ic">🔐</div><h4>"怕记错、怕丢，也不敢传上网"</h4><p>学生信息是红线，云笔记不敢用，纸质又怕丢。</p></div>
   </div>
   <div class="pain-solution reveal">
     <span class="arrow">→</span>
-    <p><b>辅导员工作平台</b> 就是为了解决这些问题而做的。<br />一个本地运行的 AI 工作台，数据存你电脑上，模型跑你电脑上，<u>所有能力都是为辅导员的真实工作量身打造</u>。</p>
+    <p><b>教育工作台</b> 就是为这两边各自做的。<br />班委记得轻松，辅导员收得明白——<u>数据只走一条线，全程在你自己的电脑上</u>。</p>
   </div>
 </div></section>
 
-<!-- 核心能力 -->
+<!-- 能力矩阵 -->
 <section id="features"><div class="wrap">
   <div class="s-head reveal">
     <div class="s-eyebrow">CORE ABILITIES</div>
-    <h2>一个工作台，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">管住辅导员的全部日常</span></h2>
-    <p>33 个功能模块覆盖学生工作全场景。规则引擎秒回、本地模型思考——<b>每一步计算都留下真实足迹，复杂问题还会分步想、分步查</b>，看得见依据、可追溯。</p>
+    <h2>一个工作台，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">管住班级的全部日常</span></h2>
+    <p>33 个功能模块覆盖学生工作全场景。规则引擎秒回、本地模型思考——<b>每一步计算都留下真实足迹，复杂问题分步想、分步查</b>。</p>
   </div>
   <div class="feat rv">
-    <div class="card tilt reveal" style="--d:0s"><div class="ic">🧮</div><h3>数据统计 · 一键出结果</h3><p>成绩排名、绩点分析、出勤统计、就业落实率……<b>点一下就算好</b>，支持图表可视化、可导出、可存档，不用再手动扒 Excel。</p></div>
-    <div class="card tilt reveal" style="--d:.07s"><div class="ic">👥</div><h3>学生管理 · 全档案可查</h3><p>班级台账、个人档案、谈心谈话记录、心理摸排、家长联系……<b>一个学生一个完整档案</b>，按班按人快速查、快速写。</p></div>
-    <div class="card tilt reveal" style="--d:.14s"><div class="ic">🚨</div><h3>学业预警 · 心中有数</h3><p>挂科预警、缺勤预警、逾期任务、重点关注学生，<b>自动识别、自动归类、自动提醒</b>，不用再靠记忆和翻表格。</p></div>
-    <div class="card tilt reveal" style="--d:.21s"><div class="ic">💬</div><h3>AI 助手 · 问一句话就好</h3><p>"谁挂科最多？""写个期末总结""给XX学生做个画像"——<b>直接问，AI 帮你查、帮你算、帮你写</b>。回答带思考过程：规则的每一步真实足迹、复杂问题分步调用工具，<b>看得见它怎么想</b>。</p></div>
-    <div class="card tilt reveal" style="--d:.28s"><div class="ic">📚</div><h3>政策智库 · 搜得到出处</h3><p>评优、资助、处分、就业……政策文件归档 + <b>语义问答检索</b>，查得到原文、引得到出处，还能自动采集学校官网通知。</p></div>
-    <div class="card tilt reveal" style="--d:.35s"><div class="ic">🛡</div><h3>本地部署 · 数据不出机</h3><p>所有数据存你电脑 IndexedDB，AI 推理本地完成，<b>从根源杜绝数据泄露</b>。AES-256 加密备份，脱敏导出，交付安心。</p></div>
+    <div class="card tilt reveal" style="--d:0s"><div class="ic">📥</div><h3>收材料，再也不用追着问</h3><p>评议批次统一下发、统一收，<b>缺哪类当场标出来</b>，谁交了谁没交一目了然。</p></div>
+    <div class="card tilt reveal" style="--d:.07s"><div class="ic">🧮</div><h3>问一句话，统计就出来</h3><p>“谁挂科最多”“各班助学金分布”——<b>10 秒出结果，每条带出处</b>，支持导出。</p></div>
+    <div class="card tilt reveal" style="--d:.14s"><div class="ic">👥</div><h3>每个学生的档案，翻得到三年</h3><p>成绩、谈话、荣誉、材料<b>一页看全</b>，点记录进详情，跳所属评议、看时间线。</p></div>
+    <div class="card tilt reveal" style="--d:.21s"><div class="ic">📚</div><h3>政策要用的时候，搜得到</h3><p><b>语义检索 + 原文出处</b>，学校官网通知还能自动采集进来。</p></div>
+    <div class="card tilt reveal" style="--d:.28s"><div class="ic">✍️</div><h3>学期总结，AI 先出一版</h3><p>基于本学期<b>真实数据</b>起草，你改改就能交，省下时间早点休息。</p></div>
+    <div class="card tilt reveal" style="--d:.35s"><div class="ic">🖼</div><h3>照片证书，随记录走</h3><p>荣誉、竞赛、班会都挂材料，<b>缩略图即点即看</b>，大图灯箱核对。</p></div>
+    <div class="card tilt reveal" style="--d:.42s"><div class="ic">📜</div><h3>谁改了什么，日志写着</h3><p>操作留痕<b>到字段级</b>：时间、操作人、从什么改成什么，都可查。</p></div>
+    <div class="card tilt reveal" style="--d:.49s"><div class="ic">💾</div><h3>换电脑、怕丢数据，都不怕</h3><p>一键<b>加密备份</b>、一键恢复；导入导出全有预览与撤销。</p></div>
+  </div>
+</div></section>
+
+<!-- 班级评议专题 -->
+<section id="review" style="background:linear-gradient(180deg,transparent,rgba(22,119,255,.04),transparent)"><div class="wrap">
+  <div class="s-head reveal">
+    <div class="s-eyebrow">CLASS REVIEW</div>
+    <h2>评议，从“拉个群收材料”<br />到<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">“一个批次一本账”</span></h2>
+    <p>评优、资助的每一场评议：批次、名单、材料、结果，一个地方管到底。</p>
+  </div>
+  <div class="steps">
+    <div class="step reveal" style="--d:0s"><div class="n">STEP 1</div><h3>建批次</h3><p>评议日期、小组成员、现场照片一次建好，这一场评议从此有据可查。</p></div>
+    <div class="step reveal" style="--d:.08s"><div class="n">STEP 2</div><h3>挂记录</h3><p>荣誉、资助记录归入所属评议；<b>未归入的单独列出</b>，漏了谁一眼看见。</p></div>
+    <div class="step reveal" style="--d:.16s"><div class="n">STEP 3</div><h3>收材料</h3><p>每类材料齐全度实时显示，<b>缺什么补什么</b>，不再靠挨个私聊。</p></div>
+    <div class="step reveal" style="--d:.24s"><div class="n">STEP 4</div><h3>归档</h3><p>一个批次一个材料包，导出即交、随班交接，档案里永远找得到。</p></div>
+  </div>
+  <div class="pain-solution reveal" style="margin-top:34px">
+    <p>荣誉、资助详情里能直接跳回所属评议；学生时间线里，看得见每一次评议记录。<b>漏了谁、缺了什么，页面上写着，不用靠记性。</b></p>
+  </div>
+</div></section>
+
+<!-- AI 与可信 -->
+<section id="ai"><div class="wrap">
+  <div class="s-head reveal">
+    <div class="s-eyebrow">TRUSTED AI</div>
+    <h2>AI <span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">先查数，再说话</span></h2>
+    <p>回答不是模型编的：先查你的真实记录，再给你答案，并附上依据。</p>
+  </div>
+  <div class="why-grid rv">
+    <div class="why-card reveal" style="--d:0s"><div class="why-num">01</div><h4>数字不靠模型猜</h4><p>全部由结构化查询从你的真实记录算出，模型只负责组织语言。</p></div>
+    <div class="why-card reveal" style="--d:.08s"><div class="why-num">02</div><h4>每条回答带依据</h4><p>哪条记录、哪个字段、截止时间——点得开、看得见，无数据时明说没有。</p></div>
+    <div class="why-card reveal" style="--d:.16s"><div class="why-num">03</div><h4>写数据先确认</h4><p>AI 只出“待确认”清单，你点头才落库；写错了也能撤销。</p></div>
   </div>
 </div></section>
 
@@ -550,7 +675,7 @@ footer a:hover{transform:translateY(-2px)}
   <div class="s-head reveal">
     <div class="s-eyebrow">LOCAL LLM</div>
     <h2>本地大模型，两档自选</h2>
-    <p>模型按需下载，装好后完全离线。<b>选哪个档看你电脑配置</b>，内存越大、档位越高，回答质量越好。</p>
+    <p>模型按需下载到本机，装好后完全离线。<b>授权决定能不能下，电脑配置决定用哪档</b>。</p>
   </div>
   <div class="models rv">
     <div class="model tilt reveal" style="--d:0s"><div class="band"></div>
@@ -570,183 +695,94 @@ footer a:hover{transform:translateY(-2px)}
   </div>
 </div></section>
 
-<!-- 为什么要本地部署 -->
-<section id="whylocal"><div class="wrap">
+<!-- 安全与隐私 -->
+<section id="security"><div class="wrap">
   <div class="s-head reveal">
-    <div class="s-eyebrow">WHY LOCAL</div>
-    <h2>为什么一定要<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">本地部署</span>？</h2>
-    <p>学生工作数据的特殊性，决定了"上云"从来不是最优解。</p>
+    <div class="s-eyebrow">SECURITY</div>
+    <h2>数据只在你电脑上，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">交接只朝一个方向</span></h2>
+    <p>学生成绩、家庭情况、心理记录——任何一项泄露都是事故。从架构上，就不给它发生的机会。</p>
   </div>
-  <div class="why-grid rv">
-    <div class="why-card reveal" style="--d:0s">
-      <div class="why-num">01</div>
-      <h4>数据安全是底线</h4>
-      <p>学生成绩、家庭经济情况、心理状态、处分记录……任何一项泄露都是严重事故。<b>数据只存本机，从架构上消除泄露风险</b>。</p>
-    </div>
-    <div class="why-card reveal" style="--d:.08s">
-      <div class="why-num">02</div>
-      <h4>AI 也不联网</h4>
-      <p>市面上的 AI 工具都要把数据传到云端才能用。辅导员工作平台用 <b>Qwen3 本地大模型</b>，所有推理在你电脑上完成，一句话都不会外传。</p>
-    </div>
-    <div class="why-card reveal" style="--d:.16s">
-      <div class="why-num">03</div>
-      <h4>断网也能用</h4>
-      <p>办公室网差、下乡走访、开会现场——<b>没网也不耽误干活</b>。查档案、做统计、问 AI，全部离线可用。</p>
-    </div>
-    <div class="why-card reveal" style="--d:.24s">
-      <div class="why-num">04</div>
-      <h4>合规省心</h4>
-      <p>不用走数据上云审批，不用签第三方数据处理协议，<b>数据在你自己电脑上，合规天然成立</b>。加密备份文件存 U 盘也放心。</p>
-    </div>
+  <div class="trust-panel reveal">
+    <div class="tr"><span class="ic">🗄</span><div><b>本地存储</b><span>数据在本机 IndexedDB，无后端、无云端。</span></div></div>
+    <div class="tr"><span class="ic">🔐</span><div><b>加密备份</b><span>完整备份口令加密，U 盘带走也放心。</span></div></div>
+    <div class="tr"><span class="ic">🧾</span><div><b>离线激活</b><span>RSA 离线验签激活码，不联网、不回传。</span></div></div>
+    <div class="tr"><span class="ic">🕵</span><div><b>无账号 · 无遥测</b><span>不注册、不采集使用数据，装完就是你的。</span></div></div>
+    <div class="tr"><span class="ic">🤝</span><div><b>交接可控</b><span>上交什么、接收什么，两端各自确认。</span></div></div>
+    <div class="tr"><span class="ic">🧹</span><div><b>随时出厂</b><span>一键恢复出厂；卸载默认不删数据。</span></div></div>
   </div>
 </div></section>
 
-<!-- 真实工作场景 -->
-<section id="scenarios" style="background:linear-gradient(180deg,transparent,rgba(22,119,255,.04),transparent)"><div class="wrap">
+<!-- 诚实清单 -->
+<section id="honest"><div class="wrap">
   <div class="s-head reveal">
-    <div class="s-eyebrow">REAL SCENARIOS</div>
-    <h2>辅导员的<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">典型一天</span></h2>
-    <p>不是花架子，是真的能帮你干活的工具。</p>
+    <div class="s-eyebrow">HONEST LIST</div>
+    <h2>先把话<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">说明白</span></h2>
+    <p>不画饼。列在这里的，没有就是没有；写“规划中”的，上线前不拿来卖。</p>
   </div>
-  <div class="scenes">
-    <div class="scene reveal">
-      <div class="scene-time">08:30</div>
-      <div class="scene-body">
-        <h4>上班一打开，今天的事一目了然</h4>
-        <p>打开工作台，今日概览自动盘点：<b>有几个待办、几个预警、谁缺勤、谁过生日</b>。不用翻好几个群、好几个表，心里先有个数。</p>
-      </div>
-    </div>
-    <div class="scene reveal" style="--d:.08s">
-      <div class="scene-time">10:00</div>
-      <div class="scene-body">
-        <h4>领导要数据，10 秒出结果</h4>
-        <p>"咱们年级这学期挂科情况怎么样？" 不用打开 Excel 拉透视表，<b>直接问 AI："统计一下各班级挂科人数排名"</b>，10 秒出结论，还能导出报告。</p>
-      </div>
-    </div>
-    <div class="scene reveal" style="--d:.16s">
-      <div class="scene-time">14:00</div>
-      <div class="scene-body">
-        <h4>找政策，不用翻 100 个群文件</h4>
-        <p>评优细则改了没？资助申请截止什么时候？<b>直接在政策库里搜</b>，语义匹配 + 原文出处，比翻聊天记录快 10 倍。学校官网有新通知也会自动采集进来。</p>
-      </div>
-    </div>
-    <div class="scene reveal" style="--d:.24s">
-      <div class="scene-time">16:00</div>
-      <div class="scene-body">
-        <h4>找学生谈话，档案随身带</h4>
-        <p>谈话前快速调出学生档案：<b>成绩、考勤、家庭情况、历史谈话记录、心理状态</b>……全在一个页面，谈话更有针对性，记录随手就写。</p>
-      </div>
-    </div>
-    <div class="scene reveal" style="--d:.32s">
-      <div class="scene-time">21:00</div>
-      <div class="scene-body">
-        <h4>写材料，AI 先出一版</h4>
-        <p>期末了要写学期工作总结？要给学生写学期鉴定？<b>让 AI 基于本学期数据先打个草稿</b>，你再改改就行，省下的时间早点休息。</p>
-      </div>
-    </div>
+  <div class="honest-grid">
+    <div class="honest-col yes reveal" style="--d:0s"><h4>✅ 已经有</h4><ul>
+      <li>双端工作台：辅导员 + 班委</li>
+      <li>班级评议全流程（批次 / 名单 / 材料 / 归档）</li>
+      <li>材料凭证：照片证书随记录走</li>
+      <li>AI 结构化问答（查数不猜）</li>
+      <li>政策检索 + 通知自动采集</li>
+      <li>加密交接包（.ewclass）+ 操作日志</li>
+      <li>两档授权，基础版永久免费</li>
+    </ul></div>
+    <div class="honest-col no reveal" style="--d:.1s"><h4>⏳ 还没有 / 规划中</h4><ul>
+      <li>局域网多机实时同步（规划中）</li>
+      <li>手机端（规划中）</li>
+      <li>校内集中部署（标准版能力，需自备服务器）</li>
+      <li>云端账号与多端自动云同步（不做：数据不出本机是底线）</li>
+    </ul></div>
   </div>
+  <p class="honest-note">如果你要的能力不在这两列里，<a href="mailto:3081554731@qq.com" style="color:var(--brand)">写邮件告诉我们</a>。</p>
 </div></section>
 
 <!-- 授权档位 -->
 <section id="tiers"><div class="wrap">
   <div class="s-head reveal">
     <div class="s-eyebrow">TIER</div>
-    <h2>授权档位</h2>
-    <p>激活码按档位签发，高版本包含低版本的全部功能。买哪档、发哪档的码。</p>
+    <h2>两档，够用就好</h2>
+    <p>数据量不分档，升降级零迁移；激活码按“档位 + 有效期 + 席位”离线签发。</p>
   </div>
   <div class="tiers rv">
-    <div class="tier tilt reveal" style="--d:0s"><div class="flag">免费</div><h4>基础版</h4><div class="id">basic</div><div class="role">33 个模块全开，不是 Demo。档案、记录、统计、预警、备份恢复，日常管理够用。</div><span class="best">免费 · 永久</span></div>
-    <div class="tier tier--featured tilt reveal" style="--d:.06s"><div class="flag">热门</div><h4>标准版</h4><div class="id">standard</div><div class="role">基础版全部能力 + AI 问答与聚合查询 + 政策语义检索 + 学生画像 + 班级评议总览 + 协作与校内部署等满血能力。大多数用户选这档。</div><span class="best">性价比最高</span></div>
+    <div class="tier tilt reveal" style="--d:0s"><div class="flag">免费</div><h4>基础版</h4><div class="id">basic</div><div class="role">33 个模块全开——档案、记录、统计、预警、备份恢复。不是 Demo，日常管理够用。</div><span class="best">免费 · 永久</span></div>
+    <div class="tier tier--featured tilt reveal" style="--d:.06s"><div class="flag">热门</div><h4>标准版</h4><div class="id">standard</div><div class="role">基础版全部能力 + AI 问答与聚合查询、政策语义检索、学生画像、班级评议总览、协作与校内部署等满血能力、自动更新。</div><span class="best">性价比最高</span></div>
   </div>
+  <p class="trial-line">首次安装送 30 天标准版全功能试用 · 试用到期落回基础版，数据不动</p>
 </div></section>
 
-<!-- 功能对比 -->
-<section id="compare"><div class="wrap">
-  <div class="s-head reveal">
-    <div class="s-eyebrow">COMPARISON</div>
-    <h2>两档功能对比</h2>
-    <p style="font-size:15px">✓ = 完整支持；"—" = 不含；"关键词 / 手动 / 基础" = 以简化形式提供。数据量不分档，升级零迁移。</p>
-  </div>
-  <div class="cmp-wrap reveal">
-  <table class="cmp" id="cmp">
-    <thead><tr>
-      <th style="text-align:left">功能</th><th data-c="0">基础版</th><th data-c="1">标准版</th>
-    </tr></thead>
-        <tbody>
-      <!-- 全部版本都有 -->
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>学生档案 / 记录 / 导出 / 备份恢复</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>数据统计 / 学业预警</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-basic">全版本</span>操作日志</td><td class="lvl">基础</td><td class="lvl">完整</td></tr>
-      <!-- 标准版 -->
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>AI 助手问答</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>聚合查询（跨班 / 跨人比较）</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>HTML 报告（带卡片可打印）</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>智能推荐问法</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>选中问 AI / 精准跳转</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>学生画像页 / 风险雷达</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>政策文件库 + 语义检索</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>政策自动采集</td><td class="lvl">手动</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>自然语言写改（一句话录 / 改数据）</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>班级评议总览 / 记录详情</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>本地模型可选档位</td><td class="no">—</td><td class="lvl">4B / 8B</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>自动更新</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>局域网数据同步（待开放）</td><td class="no">—</td><td class="lvl">规划中</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>手机移动端</td><td class="no">—</td><td class="yes">✓</td></tr>
-      <tr><td class="row-name"><span class="grp grp-std">标准版</span>校内自部署模型</td><td class="no">—</td><td class="yes">✓</td></tr>
-    </tbody>
-    <tfoot><tr><td colspan="3">档位功能来自产品真实开关表（featureFlags.js）；本地模型可选档位由授权决定，具体使用哪档看电脑配置。高版本包含低版本全部功能。</td></tr></tfoot>
-  </table>
-  </div>
-</div></section>
-
-<!-- 定位：不是学校系统，是私人助手 -->
-<section id="position"><div class="wrap">
-  <div class="s-head reveal">
-    <div class="s-eyebrow">YOUR OWN TOOL</div>
-    <h2>不是学校系统，<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">是辅导员自己的助手</span></h2>
-    <p>学校系统管流程与归档；它管你每天的工作效率——不冲突，能互补。</p>
-  </div>
-  <div class="pos-divider rv">
-    <div class="pos-side pos-school reveal" style="--d:0s">
-      <div class="pos-ic">🏫</div>
-      <h4>学校学工系统</h4>
-      <p>全校一个平台，流程归学校、数据归学校，改个字段要审批。</p>
-    </div>
-    <div class="pos-vs reveal" style="--d:.06s">VS</div>
-    <div class="pos-side pos-mine reveal" style="--d:.1s">
-      <div class="pos-ic">🧑‍🏫</div>
-      <h4>你的私人助手</h4>
-      <p>装在你电脑上，数据不出这台机器。班级怎么管你说了算，AI 随叫随到。</p>
-    </div>
-  </div>
-</div></section>
-
-<!-- 激活与升级 -->
+<!-- 激活与 FAQ -->
 <section id="activate"><div class="wrap">
   <div class="s-head reveal">
     <div class="s-eyebrow">GET STARTED</div>
-    <h2>怎么激活 · 怎么升级</h2>
-    <p>激活码是离线签发的，按"档位 + 有效期 + 席位"打包，无法篡改。</p>
+    <h2>怎么开始 · 怎么升级</h2>
+    <p>下载统一包，安装时选角色，即可使用。标准版激活码离线签发，无法篡改。</p>
   </div>
   <div class="steps rv">
-    <div class="step reveal" style="--d:0s"><div class="n">STEP 1</div><h3>拿到激活码</h3><p>向开发者购买对应档位，会发给你一个该档位的激活码（含有效期与席位）。</p></div>
-    <div class="step reveal" style="--d:.08s"><div class="n">STEP 2</div><h3>应用内激活</h3><p>打开应用 → 激活 / 授权 → 粘贴激活码。激活码绑定本机，防止拷走账号白拿档位。</p></div>
-    <div class="step reveal" style="--d:.16s"><div class="n">STEP 3</div><h3>升级档位</h3><p>想升更高档，联系开发者重发一个更高档激活码，应用内重新激活即可覆盖。</p></div>
+    <div class="step reveal" style="--d:0s"><div class="n">STEP 1</div><h3>下载安装</h3><p>下载统一安装包，安装时选「辅导员工作平台」或「班委工作平台」。</p></div>
+    <div class="step reveal" style="--d:.08s"><div class="n">STEP 2</div><h3>先用 30 天</h3><p>首装即享 30 天标准版全功能试用；基础版永久免费，随时可留。</p></div>
+    <div class="step reveal" style="--d:.16s"><div class="n">STEP 3</div><h3>激活 / 升级</h3><p>需要标准版时购买激活码，应用内粘贴即激活，绑定本机；升级重发高档码即可。</p></div>
   </div>
   <div class="faq">
-    <div class="qa reveal"><h4>激活码能多台电脑用吗？</h4><p class="a">激活码会绑定第一台激活它的设备。标准版按席位授权，每个席位一个码，各自绑定各自机器。</p></div>
-    <div class="qa reveal"><h4>过期了 / 重装系统怎么办？</h4><p class="a">激活码含有效期，到期需续发；重装系统后在同一台机器可用原码重新激活（老授权兼容）。</p></div>
-    <div class="qa reveal"><h4>AI 回答要更好，选哪一档模型？</h4><p class="a">模型档（4B / 8B）与授权档是两套：模型看内存，授权看购买。要复杂推理用 8B（强力档）模型，标准版及以上授权都能下载。</p></div>
-    <div class="qa reveal"><h4>这和学校的学生管理系统冲突吗？</h4><p class="a">不冲突。它是辅导员个人的辅助工具：不接学校系统、不占用学校账号、不上传任何数据，数据只存在你电脑上。学校系统管全校的归档与流程，它管你每天的工作效率——两个可以同时用，互补不替代。</p></div>
+    <div class="qa reveal"><h4>两个平台装哪个？</h4><p class="a">一个安装包，安装时选角色；换角色需卸载重装，数据不会被删。</p></div>
+    <div class="qa reveal"><h4>班委的数据怎么给辅导员？</h4><p class="a">班内一键打包成 .ewclass 交接包；辅导员先备份、再预览、逐项批准导入，可整批撤销。</p></div>
+    <div class="qa reveal"><h4>激活码能多台电脑用吗？</h4><p class="a">激活码会绑定第一台激活它的设备；标准版按席位授权，每个席位一个码，各自绑定各自机器。</p></div>
+    <div class="qa reveal"><h4>试用期结束会怎样？</h4><p class="a">自动落回基础版，数据不动；随时激活即恢复标准版能力。</p></div>
+    <div class="qa reveal"><h4>AI 会把学生数据传出去吗？</h4><p class="a">不会。模型与数据都在本机，应用无账号、无遥测，一句话都不会外传。</p></div>
+    <div class="qa reveal"><h4>和学校系统冲突吗？</h4><p class="a">不冲突：学校系统管全校流程与归档，它管你和你们班的日常效率，互补不替代。</p></div>
+    <div class="qa reveal"><h4>班委端和辅导员端功能一样吗？</h4><p class="a">功能完整一致；差异只在“管几个班”和“数据往哪交”。</p></div>
+    <div class="qa reveal"><h4>电脑坏了 / 换电脑怎么办？</h4><p class="a">加密备份一键恢复；重装系统后在同一台机器可用原码重新激活。</p></div>
   </div>
 </div></section>
 
-<!-- CTA -->
+<!-- 收尾 CTA -->
 <section><div class="wrap"><div class="cta-card reveal">
-  <h2>免费下载，开箱即用</h2>
-  <p>基础版永久免费，33 个功能模块全开。<b>离线 · 不采集 · 数据永远在你自己电脑上。</b><br />下载即用，先跑通日常；再按需下载本地模型，把 AI 助手用起来。</p>
+  <h2>今天就把班级台账搬进自己电脑</h2>
+  <p>基础版永久免费，装完选角色即用；先试用 <b>30 天标准版全部能力</b>，不喜欢停在基础版就好。</p>
   <div class="cta-actions">
-    <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">⬇ 下载安装包</a>
+    <a class="btn btn--primary" href="https://gh-proxy.com/https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-setup.exe">免费下载 · 装时选角色</a>
     <a class="btn" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">查看版本更新</a>
   </div>
 </div></div></section>
@@ -757,10 +793,10 @@ footer a:hover{transform:translateY(-2px)}
     <div class="about-text">
       <div class="about-label">关于项目</div>
       <h3>从一线需求里长出来的工具</h3>
-      <p>辅导员工作平台由石家庄铁道大学机械工程学院 <b>孔德尚</b>（学生干部 / 项目开发者）牵头开发，辅导员 <b>苏康</b> 老师全程参与需求打磨与功能设计。</p>
-      <p>项目从真实的学工场景出发：数据散在各个 Excel 里不好查、政策文件找起来麻烦、AI 工具不敢碰学生数据…… 这些都是辅导员日常工作中实实在在的痛点。</p>
-      <p>于是我们认真把它做成了一个完整的产品：33 个功能模块、本地大模型、政策智库、加密备份…… 所有功能都围绕一个原则 —— <b>数据存本地，安全是底线</b>。</p>
-      <p>如果你是辅导员，希望这个工具能帮你省点时间、少点重复劳动。有任何想法和建议，欢迎随时交流。</p>
+      <p>教育工作台由石家庄铁道大学机械工程学院 <b>孔德尚</b>（学生干部 / 项目开发者）牵头开发，辅导员 <b>苏康</b> 老师全程参与需求打磨与功能设计。</p>
+      <p>项目从真实的学工场景出发：数据散在各个 Excel 里不好查、评议材料收不齐、政策文件找起来麻烦、AI 工具不敢碰学生数据…… 这些都是辅导员与班委日常工作中实实在在的痛点。</p>
+      <p>于是我们认真把它做成了一个完整的产品：33 个功能模块、班级评议全流程、材料凭证、本地大模型、政策智库、加密备份…… 所有功能都围绕一个原则 —— <b>数据存本地，安全是底线</b>。</p>
+      <p>如果你是辅导员或班委，希望这个工具能帮你省点时间、少点重复劳动。有任何想法和建议，欢迎随时交流。</p>
       <div class="about-sign">— 孔德尚 · 石家庄铁道大学机械工程学院（项目开发者）</div>
     </div>
   </div>
@@ -768,12 +804,13 @@ footer a:hover{transform:translateY(-2px)}
 
 <footer>
   <div class="row">
-    <span>辅导员工作平台 · v3.6.0</span>
+    <span>教育工作台 · 辅导员工作平台 / 班委工作平台 · v3.6.0</span>
     <a href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest" target="_blank" rel="noopener">更新与版本</a>
+    <a href="#flow">数据一条线</a>
     <a href="#tiers">授权档位</a>
-    <a href="#compare">功能对比</a>
+    <a href="#honest">诚实清单</a>
   </div>
-  <div>联系 / 购买 / 升级档位 · 邮箱：<a href="mailto:3081554731@qq.com">3081554731@qq.com</a></div>
+  <div>联系 / 咨询 / 购买 / 升级档位 · 邮箱：<a href="mailto:3081554731@qq.com">3081554731@qq.com</a></div>
   <div style="margin-top:8px">项目托管于 GitHub · 如下载缓慢或更新失败，请优化网络环境或使用镜像加速。</div>
 </footer>
 
@@ -789,7 +826,7 @@ footer a:hover{transform:translateY(-2px)}
     bar.style.width = (sc*100)+'%'
     nav.classList.toggle('scrolled', h.scrollTop > 30)
     // scrollspy
-    var ids = ['pain','features','whylocal','models','tiers','compare','activate'], cur=''
+    var ids = ['flow','roles','pain','features','review','ai','models','security','honest','tiers','activate'], cur=''
     for (var i=0;i<ids.length;i++){ var el=doc.getElementById(ids[i]); if(el && el.getBoundingClientRect().top <= h.clientHeight*0.4) cur=ids[i] }
     doc.querySelectorAll('.navlink').forEach(function(a){
       a.classList.toggle('active', a.getAttribute('href')==='#'+cur)
@@ -917,5 +954,19 @@ footer a:hover{transform:translateY(-2px)}
   doc.querySelectorAll('.qa').forEach(function(q){ q.addEventListener('click', function(){ q.classList.toggle('open') }) })
 })()
 </script>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.win-tab')
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('is-on') })
+      t.classList.add('is-on')
+      var id=t.getAttribute('data-pane')
+      document.querySelectorAll('.win-pane').forEach(function(p){ p.style.display = p.id===id ? '' : 'none' })
+    })
+  })
+})()
+</script>
+
 </body>
 </html>
