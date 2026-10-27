@@ -2527,6 +2527,20 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 @media(max-width:340px){
   .hero h1{font-size:23px}
 }
+
+/* 主标题：两组产品名之间留出真正的呼吸 */
+.hero h1{font-size:min(6.9vw,92px);letter-spacing:.005em;line-height:1.08;margin-top:36px;white-space:nowrap}
+.hero h1 .hero-slash{display:inline-block;margin:0 .3em;font-size:.72em;font-weight:400;color:rgba(22,119,255,.42);transform:translateY(-.03em)}
+.hero h1::after{margin-top:22px;width:112px}
+.hero .sub{margin-top:24px}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(24px,6.6vw,38px);letter-spacing:0;margin-top:28px}
+  .hero h1 .hero-slash{margin:0 .18em;font-size:.78em}
+  .hero h1::after{width:74px;margin-top:15px}
+}
+@media(max-width:340px){
+  .hero h1{font-size:21px}
+}
 </style>
 </head>
 <body>
@@ -2564,7 +2578,7 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 
   <div class="hero-top">
     <div class="kicker reveal"><span class="dot"></span><span class="kicker-full">统一安装包 · 装时选角色 · 本机运行 · 离线可用 · v4.1.0</span><span class="kicker-short">统一安装包 · 装时选角色 · 离线可用 · v4.1.0</span></div>
-    <h1 id="hero-title" class="reveal"><span class="g">辅导员工作台 / 班干部工作台</span></h1>
+    <h1 id="hero-title" class="reveal" aria-label="辅导员工作台 / 班干部工作台"><span class="g">辅导员工作台</span><span class="hero-slash" aria-hidden="true">/</span><span class="g">班干部工作台</span></h1>
     <p class="sub reveal">把档案、考勤、谈话、评议收进一台电脑，<br class="mobile-break" /><b>把时间还给学生。</b></p>
     <p class="hero-def reveal"><span class="def-row">辅导员端管多班，班干部端管单班。</span><span class="def-row"><b>数据留在本机，AI 也在本机</b>；找文件、查数据，不再翻聊天记录。</span></p>
     <div class="cta reveal">
