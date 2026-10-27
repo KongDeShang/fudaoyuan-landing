@@ -2474,6 +2474,23 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 .cta-card p{text-wrap:pretty}
 .fm-line{text-wrap:balance}
 .about-body p{text-wrap:pretty}
+
+/* 主标题改为教育工作台，角色作为第二行；原主张下移为收束句 */
+.hero h1 .h1-roles{display:block;margin-top:8px;font-size:.46em;line-height:1.25;letter-spacing:-.035em;white-space:nowrap;font-weight:800}
+.hero h1 .h1-dash{margin-right:.12em;color:var(--ink3);font-weight:400;opacity:.62}
+.hero h1::after{margin-top:16px}
+.hero-work--tagline{margin-top:104px}
+.hero-work--tagline .hero-work__roles{font-size:.62em;letter-spacing:-.02em}
+@media(max-width:700px){
+  .hero h1 .h1-roles{font-size:.44em;margin-top:6px}
+  .hero-work--tagline{margin-top:84px}
+}
+
+.hero h1 .h1-roles{font-size:.5em}
+.hero-work--tagline .hero-work__roles{font-size:.92em}
+@media(max-width:700px){
+  .hero h1 .h1-roles{font-size:.48em}
+}
 </style>
 </head>
 <body>
@@ -2511,14 +2528,14 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 
   <div class="hero-top">
     <div class="kicker reveal"><span class="dot"></span><span class="kicker-full">统一安装包 · 装时选角色 · 本机运行 · 离线可用 · v4.1.0</span><span class="kicker-short">统一安装包 · 装时选角色 · 离线可用 · v4.1.0</span></div>
-    <h1 id="hero-title" class="reveal">别让<span class="hl">表格和材料</span><span class="h1-comma">，</span><br class="mobile-break" /><span class="g">把学生工作挤没了。</span></h1>
+    <h1 id="hero-title" class="reveal">教育工作台<span class="h1-roles"><span class="h1-dash">——</span><span class="g">辅导员工作台 / 班干部工作台</span></span></h1>
     <p class="sub reveal">把档案、考勤、谈话、评议收进一台电脑，<br class="mobile-break" /><b>把时间还给学生。</b></p>
     <p class="hero-def reveal"><span class="def-row">辅导员端管多班，班干部端管单班。</span><span class="def-row"><b>数据留在本机，AI 也在本机</b>；找文件、查数据，不再翻聊天记录。</span></p>
     <div class="cta reveal">
       <a class="btn btn--primary" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-unified-setup.exe" aria-label="免费下载统一安装包（打开 GitHub Release 页）">⬇ 免费下载 Windows 版</a>
       <a class="btn btn--ghost" href="#matrix">先看两个产品</a>
     </div>
-    <p class="hero-work reveal" aria-label="教育工作台——辅导员工作台 / 班干部工作台"><span class="hero-work__title" aria-hidden="true">教育工作台</span><span class="hero-work__dash" aria-hidden="true">——</span><span class="hero-work__roles" aria-hidden="true">辅导员工作台 / 班干部工作台</span></p>
+    <p class="hero-work hero-work--tagline reveal" aria-label="别让表格和材料，把学生工作挤没了。"><span class="hero-work__title" aria-hidden="true">别让表格和材料，</span><span class="hero-work__roles" aria-hidden="true">把学生工作挤没了。</span></p>
     <div class="hero-stats reveal" role="list" aria-label="关键数据">
       <div class="stat" role="listitem"><b data-n="33" data-suffix="+">33+</b><span>功能模块</span></div>
       <div class="stat" role="listitem"><b data-n="100" data-suffix="%">100%</b><span>数据留在本机</span></div>
