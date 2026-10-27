@@ -2491,6 +2491,42 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 @media(max-width:700px){
   .hero h1 .h1-roles{font-size:.48em}
 }
+
+/* 主标题强制单行 */
+.hero h1{white-space:nowrap}
+.hero h1 .h1-roles{display:inline;margin-left:.14em;font-size:.48em}
+.hero h1 .h1-dash{margin-right:.08em}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(22px,6.6vw,30px);white-space:nowrap;letter-spacing:-.055em;padding:0 6px}
+  .hero h1 .h1-roles{margin-left:.1em;font-size:.46em}
+}
+
+@media(max-width:700px){
+  .hero h1 .h1-roles{font-size:.56em}
+}
+@media(max-width:360px){
+  .hero h1 .h1-roles{font-size:.48em}
+}
+
+/* 主标题只保留两个工作台角色 */
+.hero h1{font-size:min(5.2vw,58px);letter-spacing:-.055em;white-space:nowrap}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(22px,6.7vw,30px);letter-spacing:-.05em;padding:0 6px}
+}
+
+/* 主标题：方正姚体 / 本地艺术字体，放大单行 */
+.hero h1{font-family:"FZYaoTi","方正姚体","STXingkai","STKaiti","KaiTi",serif;font-size:min(7.2vw,92px);font-weight:700;letter-spacing:-.02em;line-height:1.05;white-space:nowrap}
+.hero h1 .g{filter:drop-shadow(0 10px 30px rgba(22,119,255,.18))}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(28px,7.2vw,44px);line-height:1.08;padding:0 6px}
+}
+
+@media(max-width:380px){
+  .hero h1{font-size:26px}
+}
+@media(max-width:340px){
+  .hero h1{font-size:23px}
+}
 </style>
 </head>
 <body>
@@ -2528,7 +2564,7 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 
   <div class="hero-top">
     <div class="kicker reveal"><span class="dot"></span><span class="kicker-full">统一安装包 · 装时选角色 · 本机运行 · 离线可用 · v4.1.0</span><span class="kicker-short">统一安装包 · 装时选角色 · 离线可用 · v4.1.0</span></div>
-    <h1 id="hero-title" class="reveal">教育工作台<span class="h1-roles"><span class="h1-dash">——</span><span class="g">辅导员工作台 / 班干部工作台</span></span></h1>
+    <h1 id="hero-title" class="reveal"><span class="g">辅导员工作台 / 班干部工作台</span></h1>
     <p class="sub reveal">把档案、考勤、谈话、评议收进一台电脑，<br class="mobile-break" /><b>把时间还给学生。</b></p>
     <p class="hero-def reveal"><span class="def-row">辅导员端管多班，班干部端管单班。</span><span class="def-row"><b>数据留在本机，AI 也在本机</b>；找文件、查数据，不再翻聊天记录。</span></p>
     <div class="cta reveal">
