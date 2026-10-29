@@ -3191,6 +3191,14 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
       <p class="a" id="faq-a3">不会。学生数据只在这台电脑读写，AI 也在本机运行，不调用云端大模型；局域网协作只在同一网络内同步，不经过服务器。班级之间用 .ewclass 交接包手动传递。</p>
     </div>
     <div class="qa reveal">
+      <h4><button type="button" class="qa-btn" aria-expanded="false" aria-controls="faq-a6">班内同步的成熟度如何？<span class="qi" aria-hidden="true">+</span></button></h4>
+      <p class="a" id="faq-a6">班内同步当前为「预览」状态：核心链路（加入码、增量同步、冲突台账、附件分块断点续传）已可用，但尚未完成双机真机验收签字；建议先在两台同 Wi-Fi 的电脑上小范围使用。验收清单会随版本公布，签字后即转为正式能力。</p>
+    </div>
+    <div class="qa reveal">
+      <h4><button type="button" class="qa-btn" aria-expanded="false" aria-controls="faq-a7">安装时提示「未知发布者」怎么办？<span class="qi" aria-hidden="true">+</span></button></h4>
+      <p class="a" id="faq-a7">安装包目前使用开发者自签名证书，Windows 会提示「未知发布者」。点「更多信息」→「仍要运行」即可安装；这是签名层级问题，不是安全问题——数据全程只在本机，不上传。可与 Release 页的 SHA256SUMS.txt 核对文件一致后放心安装。</p>
+    </div>
+    <div class="qa reveal">
       <h4><button type="button" class="qa-btn" aria-expanded="false" aria-controls="faq-a4">激活码绑定电脑吗？换机怎么办？<span class="qi" aria-hidden="true">+</span></button></h4>
       <p class="a" id="faq-a4">绑定本机。换新电脑时先联系开发者办理授权迁移；旧机做加密备份，新机恢复数据后重新激活。重装系统仍在同一台机器，可用原激活码恢复授权。</p>
     </div>
