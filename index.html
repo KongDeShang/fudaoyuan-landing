@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>教育工作台 v5.1.0</title>
-<meta name="description" content="本机运行、离线可用的学生工作平台：辅导员端管多班，班干部端管单班。档案、成绩、考勤、谈话、评议、材料一人一档；数据留在本机，AI 也在本机，找文件、查数据不用再翻聊天记录。一个安装包，装时选角色。v5.1.0。" />
+<title>教育工作台 v5.2.0</title>
+<meta name="description" content="本机运行、离线可用的学生工作平台：辅导员端管多班，班干部端管单班。档案、成绩、考勤、谈话、评议、材料一人一档；数据留在本机，AI 也在本机，找文件、查数据不用再翻聊天记录。一个安装包，装时选角色。v5.2.0。" />
 <meta name="keywords" content="学生工作,辅导员工作平台,班干部工作平台,本机,离线,本地AI,学生档案,班级评议,材料归档,班级交接,ewclass" />
 <meta name="author" content="孔德尚, 曹京亚" />
 <meta name="robots" content="index,follow" />
@@ -12,10 +12,10 @@
 <meta property="og:site_name" content="教育工作台" />
 <meta property="og:locale" content="zh_CN" />
 <meta property="og:title" content="别让表格和材料，把学生工作挤没了｜辅导员工作平台 · 班干部工作平台" />
-<meta property="og:description" content="辅导员端管多班，班干部端管单班；数据留在本机，AI 也在本机。一个安装包，装时选角色，本机运行、离线可用，v5.1.0。" />
+<meta property="og:description" content="辅导员端管多班，班干部端管单班；数据留在本机，AI 也在本机。一个安装包，装时选角色，本机运行、离线可用，v5.2.0。" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="别让表格和材料，把学生工作挤没了｜辅导员工作平台 · 班干部工作平台" />
-<meta name="twitter:description" content="辅导员端管多班，班干部端管单班；数据留在本机，AI 也在本机。一个安装包，装时选角色，本机运行、离线可用，v5.1.0。" />
+<meta name="twitter:description" content="辅导员端管多班，班干部端管单班；数据留在本机，AI 也在本机。一个安装包，装时选角色，本机运行、离线可用，v5.2.0。" />
 <meta name="theme-color" content="#eef4ff" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%230a5bd3'/%3E%3Cstop%20offset='1'%20stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='url(%23g)'/%3E%3Ctext%20x='32'%20y='45'%20font-size='34'%20text-anchor='middle'%20fill='%23fff'%20font-family='PingFang%20SC,Microsoft%20YaHei,sans-serif'%3E教%3C/text%3E%3C/svg%3E" />
 <!--
@@ -24,7 +24,7 @@
   分发：一个统一安装包，安装时选角色；装后双端独立更新、独立数据
   视觉：粒子星网 + 渐变 + 卡片 tilt + 滚动 reveal + 跑马灯
   可访问性：skip link / landmark / aria / 键盘可导航 / prefers-reduced-motion
-  开发者：石家庄铁道大学 机械工程学院 孔德尚 · 曹京亚（老师 · 项目开发者） · Copyright © 2026 · v5.1.0
+  开发者：石家庄铁道大学 机械工程学院 孔德尚 · 曹京亚（老师 · 项目开发者） · Copyright © 2026 · v5.2.0
 -->
 <style>
 :root{
@@ -1326,6 +1326,9 @@ footer{border-top:1px solid var(--line);padding:52px 0 30px;background:linear-gr
 .tu-progress__head b{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:9px;color:var(--brand-text)}
 .tu-progress__bar{height:3px;border-radius:3px;background:rgba(22,119,255,.08);margin-top:6px;overflow:hidden}
 .tu-progress__bar i{display:block;height:100%;width:100%;border-radius:3px;background:linear-gradient(90deg,#0fb8e6,#1677ff);box-shadow:0 0 10px rgba(22,119,255,.4)}
+.tu-freshness{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:2px}
+.tu-freshness span{font-size:8px;color:var(--ink3);background:rgba(22,119,255,.045);border:1px solid rgba(22,119,255,.1);border-radius:999px;padding:2px 6px;white-space:nowrap}
+.tu-freshness span.ok{color:#07866a;background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.16)}
 .tu-conflict-row{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;border:1px solid rgba(245,158,11,.18);background:rgba(245,158,11,.07)}
 .tu-alert{display:grid;place-items:center;width:22px;height:22px;border-radius:7px;background:rgba(245,158,11,.16);color:#8a5d0a;font-size:11px;font-weight:900;flex:none}
 .tu-conflict-row b{display:block;font-size:10px;color:var(--ink)}
@@ -2701,7 +2704,7 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
   </div>
 
   <div class="hero-top">
-    <div class="kicker reveal"><span class="dot"></span><span class="kicker-full">统一安装包 · 装时选角色 · 本机运行 · 离线可用 · v5.1.0</span><span class="kicker-short">统一安装包 · 装时选角色 · 离线可用 · v5.1.0</span></div>
+    <div class="kicker reveal"><span class="dot"></span><span class="kicker-full">统一安装包 · 装时选角色 · 本机运行 · 离线可用 · v5.2.0</span><span class="kicker-short">统一安装包 · 装时选角色 · 离线可用 · v5.2.0</span></div>
     <h1 id="hero-title" class="reveal" aria-label="辅导员工作台 / 班干部工作台"><span class="g">辅导员工作台</span><span class="hero-slash" aria-hidden="true">/</span><span class="g">班干部工作台</span></h1>
     <p class="sub reveal">把档案、考勤、谈话、评议收进一台电脑，<br class="mobile-break" /><b>把时间还给学生。</b></p>
     <p class="hero-def reveal"><span class="def-row">辅导员端管多班，班干部端管单班。</span><span class="def-row"><b>数据留在本机，AI 也在本机</b>；找文件、查数据，不再翻聊天记录。</span></p>
@@ -2711,7 +2714,7 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
     </div>
     <p class="hero-work hero-work--tagline reveal" aria-label="别让表格和材料，把学生工作挤没了。"><span class="hero-work__title" aria-hidden="true">别让表格和材料，</span><span class="hero-work__roles" aria-hidden="true">把学生工作挤没了。</span></p>
     <div class="hero-stats reveal" role="list" aria-label="关键数据">
-      <div class="stat" role="listitem"><b data-n="33" data-suffix="+">33+</b><span>功能模块</span></div>
+      <div class="stat" role="listitem"><b data-n="34" data-suffix="">34</b><span>个可见功能模块</span></div>
       <div class="stat" role="listitem"><b data-n="100" data-suffix="%">100%</b><span>数据留在本机</span></div>
       <div class="stat" role="listitem"><b data-n="1" data-suffix="">1</b><span>统一安装包 · 装时选角色</span></div>
       <div class="stat" role="listitem"><b data-n="0" data-suffix="">0</b><span>云端依赖 · 离线可用</span></div>
@@ -2754,10 +2757,10 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 <!-- 跑马灯 -->
 <div class="marquee" aria-hidden="true"><div class="track" id="mq">
   <div class="mq-half">
-    <span>本机运行</span><span>离线可用</span><span>学生档案</span><span>成绩</span><span>考勤</span><span>谈话</span><span>预警</span><span>待办</span><span>资助</span><span>党团</span><span>荣誉</span><span>班级评议</span><span>材料归档</span><span>一人一档材料包</span><span>导入导出</span><span>备份恢复</span><span>数据健康</span><span>.ewclass 班级交接</span><span>AI 只写提案</span><span>v5.1.0</span>
+    <span>本机运行</span><span>离线可用</span><span>学生档案</span><span>成绩</span><span>考勤</span><span>谈话</span><span>预警</span><span>待办</span><span>资助</span><span>党团</span><span>荣誉</span><span>班级评议</span><span>材料归档</span><span>一人一档材料包</span><span>导入导出</span><span>备份恢复</span><span>数据健康</span><span>.ewclass 班级交接</span><span>AI 只写提案</span><span>v5.2.0</span>
   </div>
   <div class="mq-half dup">
-    <span>本机运行</span><span>离线可用</span><span>学生档案</span><span>成绩</span><span>考勤</span><span>谈话</span><span>预警</span><span>待办</span><span>资助</span><span>党团</span><span>荣誉</span><span>班级评议</span><span>材料归档</span><span>一人一档材料包</span><span>导入导出</span><span>备份恢复</span><span>数据健康</span><span>.ewclass 班级交接</span><span>AI 只写提案</span><span>v5.1.0</span>
+    <span>本机运行</span><span>离线可用</span><span>学生档案</span><span>成绩</span><span>考勤</span><span>谈话</span><span>预警</span><span>待办</span><span>资助</span><span>党团</span><span>荣誉</span><span>班级评议</span><span>材料归档</span><span>一人一档材料包</span><span>导入导出</span><span>备份恢复</span><span>数据健康</span><span>.ewclass 班级交接</span><span>AI 只写提案</span><span>v5.2.0</span>
   </div>
 </div></div>
 
@@ -2863,7 +2866,7 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
         <div class="mrow"><dt>与班委端</dt><dd>按周期接收班干部上交的增量 <b>.ewclass</b>，预览、去重、冲突处理后归档维护，可整批撤销。</dd></div>
       </dl>
       <div class="tags"><span class="tag">学生档案</span><span class="tag">成绩</span><span class="tag">考勤</span><span class="tag">谈话</span><span class="tag">预警</span><span class="tag">待办</span><span class="tag">资助</span><span class="tag">党团</span><span class="tag">荣誉</span><span class="tag">班级评议</span><span class="tag">材料归档</span></div>
-      <div class="dl"><a class="btn btn--primary btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-unified-setup.exe" aria-label="下载统一安装包（打开 GitHub Release 页）">⬇ 下载统一安装包</a><span class="hint">安装时选择「辅导员工作平台」</span></div>
+      <div class="dl"><a class="btn btn--ghost btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases" target="_blank" rel="noopener" aria-label="查看辅导员端版本与更新（打开 GitHub Releases 页）">查看版本</a><span class="hint">辅导员端独立更新源</span></div>
     </div>
     <div class="mcard mcard--cadre tilt reveal" style="--d:.08s">
       <div class="flag">单班工作区</div>
@@ -2873,10 +2876,11 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
         <div class="mrow"><dt>班级范围</dt><dd>一个实例只绑定<b>一个班级</b>，不提供跨班切换；当前班级就是工作区边界。</dd></div>
         <div class="mrow"><dt>安装与更新</dt><dd>统一安装包，<b>装时选角色</b>；装后独立更新源。</dd></div>
         <div class="mrow"><dt>数据</dt><dd>本机独立数据目录，与辅导员端互不读写。</dd></div>
+        <div class="mrow"><dt>班内同步</dt><dd>上次成功、班长水位、本机落后、待班长确认、成员同步中与班长离线分别提示；<b>同字段冲突必须人工确认</b>。</dd></div>
         <div class="mrow"><dt>与辅导员端</dt><dd>按周期打包本班新增记录与材料为 <b>.ewclass</b> 上交；删除只能作「建议删除」。</dd></div>
       </dl>
       <div class="tags"><span class="tag">学生档案</span><span class="tag">成绩</span><span class="tag">考勤</span><span class="tag">谈话</span><span class="tag">待办</span><span class="tag">班级评议</span><span class="tag">材料归档</span><span class="tag">一人一档材料包</span></div>
-      <div class="dl"><a class="btn btn--primary btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-unified-setup.exe" aria-label="下载统一安装包（打开 GitHub Release 页）">⬇ 下载统一安装包</a><span class="hint">安装时选择「班干部工作平台」</span></div>
+      <div class="dl"><a class="btn btn--ghost btn--sm" href="https://github.com/KongDeShang/fudaoyuan-cadre-releases/releases" target="_blank" rel="noopener" aria-label="查看班干部端版本与更新（打开 GitHub Releases 页）">查看版本</a><span class="hint">班干部端独立更新源</span></div>
     </div>
   </div>
 
@@ -2958,11 +2962,11 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
       <div class="s-eyebrow">TEAM &amp; LAN SYNC</div>
       <h2 id="team-title">班委<span class="g2">局域网协同</span></h2>
       <p class="team-subtitle">各记各的，<span>也能共同维护同一份班级数据。</span></p>
-      <p class="team-lead">班长、团支书、学委、心理委员、卫生委员……各管自己那块，在各自电脑上记；同一个 Wi-Fi 下同步改动，数据汇总成一份完整的班级数据。</p>
+      <p class="team-lead">班长、团支书、学委、心理委员、卫生委员……各管自己那块，在各自电脑上记；同一个 Wi-Fi 下同步改动。上次成功同步、班长正式水位、本机是否落后与谁待确认都会写清楚，不再只显示一个模糊的“同步中”。</p>
     </div>
   </div>
 
-  <div class="team-ui reveal" role="img" aria-label="班委版协同界面：左侧是班长、团支书、学委、心理委员、卫生委员、生活委员各自的电脑，右侧是班长汇总后的班级主数据，中间只双向同步增量">
+  <div class="team-ui reveal" role="img" aria-label="班委版协同界面：左侧是班长、团支书、学委、心理委员、卫生委员、生活委员各自的电脑，右侧是班长汇总后的班级主数据；中间只双向同步增量，并显示上次成功同步、班长正式水位、本机已最新和待确认冲突">
     <div class="tu-bar">
       <span class="tu-dots"><i></i><i></i><i></i></span>
       <b>班委版协同</b>
@@ -3004,6 +3008,11 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
         <div class="tu-progress">
           <div class="tu-progress__head"><span>本次增量</span><b>6 / 6 已汇总</b></div>
           <div class="tu-progress__bar"><i></i></div>
+        </div>
+        <div class="tu-freshness" aria-label="同步状态：上次成功同步 14:02，班长正式水位 128，本机已是最新">
+          <span class="ok">上次成功同步 14:02</span>
+          <span>班长水位 #128</span>
+          <span>本机已最新</span>
         </div>
         <div class="tu-conflict-row"><span class="tu-alert">!</span><div><b>1 条字段冲突待确认</b><small>心理记录 · 选择保留哪一边后才会入库</small></div><em>待确认</em></div>
       </main>
@@ -3134,18 +3143,18 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
         <li>.ewclass 双向交接包</li>
         <li>加密备份 / 恢复</li>
       </ul>
-      <div class="tier-dl"><a class="btn btn--primary btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-unified-setup.exe" aria-label="下载统一安装包（打开 GitHub Release 页）">⬇ 下载统一安装包</a><span class="hint">安装时选择「辅导员工作平台」或「班干部工作平台」</span></div>
+      <div class="tier-dl"><a class="btn btn--ghost btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases" target="_blank" rel="noopener" aria-label="查看基础版版本与更新（打开 GitHub Releases 页）">查看版本</a><span class="hint">版本说明与更新记录</span></div>
     </div>
-    <div class="tier tier--featured tilt reveal" style="--d:.06s"><div class="flag">热门</div><h4>标准版</h4><div class="id">standard</div><div class="role">基础版全部能力，加 AI、政策检索与局域网多人协作；首次安装试用 30 天。</div>
+    <div class="tier tier--featured tilt reveal" style="--d:.06s"><div class="flag">热门</div><h4>标准版</h4><div class="id">standard</div><div class="role">基础版全部能力，加 AI、政策检索与局域网多人协作（预览）；首次安装试用 30 天。</div>
       <div class="tier-price"><b>30 天</b><span>首次安装试用</span></div>
       <ul class="tier-feats">
         <li>AI 问答 / 聚合查询（附依据）</li>
-        <li>政策语义检索 + 自动采集</li>
+        <li>政策检索 + 自动采集</li>
         <li>学生画像 / 风险雷达</li>
-        <li>局域网多机同步（多班干部协作）</li>
+        <li>局域网多机同步（班干部协作，预览）</li>
         <li>自动更新</li>
       </ul>
-      <div class="tier-dl"><a class="btn btn--primary btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-unified-setup.exe" aria-label="下载统一安装包（打开 GitHub Release 页）">⬇ 下载统一安装包</a><span class="hint">安装时选择「辅导员工作平台」或「班干部工作平台」</span></div>
+      <div class="tier-dl"><a class="btn btn--ghost btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases" target="_blank" rel="noopener" aria-label="查看标准版版本与更新（打开 GitHub Releases 页）">查看版本</a><span class="hint">版本说明与更新记录</span></div>
     </div>
   </div>
   <p class="tiers-note reveal">统一安装包，安装时选角色；档位功能来自产品真实开关表。本地模型可选档位由授权决定，具体使用哪档看电脑配置。高版本包含低版本全部功能。</p>
@@ -3159,14 +3168,14 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
     <h2 id="about-title">从一线需求里，<br /><span>长出来的工具。</span></h2>
     <p class="about-lead">数据散在 Excel、政策文件难找、云端 AI 不敢碰学生数据——这不是抽象痛点，是每天都要处理的麻烦。</p>
     <div class="about-body">
-      <p>项目由石家庄铁道大学 机械工程学院 · 孔德尚（学生干部 · 项目开发者）、曹京亚（老师 · 项目开发者）牵头，苏康辅导员全程参与需求打磨与功能设计。我们从真实学工场景出发，把日常痛点做成完整产品：33 个功能模块、本机大模型、政策智库、加密备份。原则只有一条——数据存本地，学生隐私是底线。希望它能帮你省点时间、少点重复劳动；有想法，欢迎随时交流。</p>
+      <p>项目由石家庄铁道大学 机械工程学院 · 孔德尚（学生干部 · 项目开发者）、曹京亚（老师 · 项目开发者）牵头，苏康辅导员全程参与需求打磨与功能设计。我们从真实学工场景出发，把日常痛点做成完整产品：34 个可见功能模块、本机大模型、政策智库、加密备份，以及能解释“谁已同步、哪里待确认”的班内协作。原则只有一条——学生业务数据存本地，学生隐私是底线。希望它能帮你省点时间、少点重复劳动；有想法，欢迎随时交流。</p>
     </div>
   </div>
 </div></section>
 
 <!-- 收尾 CTA -->
 <section id="cta" aria-labelledby="cta-title"><div class="wrap"><div class="cta-card reveal">
-  <span class="cta-kicker">本机运行 · 离线可用 · v5.1.0</span>
+  <span class="cta-kicker">本机运行 · 离线可用 · v5.2.0</span>
   <h2 id="cta-title">学生工作，不该散在群和表里。</h2>
   <p>档案、考勤、评议、材料与 AI 都装进一台电脑；把时间，还给学生。</p>
   <div class="cta-actions">
@@ -3191,10 +3200,6 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
       <p class="a" id="faq-a3">不会。学生数据只在这台电脑读写，AI 也在本机运行，不调用云端大模型；局域网协作只在同一网络内同步，不经过服务器。班级之间用 .ewclass 交接包手动传递。</p>
     </div>
     <div class="qa reveal">
-      <h4><button type="button" class="qa-btn" aria-expanded="false" aria-controls="faq-a6">班内同步的成熟度如何？<span class="qi" aria-hidden="true">+</span></button></h4>
-      <p class="a" id="faq-a6">班内同步当前为「预览」状态：核心链路（加入码、增量同步、冲突台账、附件分块断点续传）已可用，但尚未完成双机真机验收签字；建议先在两台同 Wi-Fi 的电脑上小范围使用。验收清单会随版本公布，签字后即转为正式能力。</p>
-    </div>
-    <div class="qa reveal">
       <h4><button type="button" class="qa-btn" aria-expanded="false" aria-controls="faq-a7">安装时提示「未知发布者」怎么办？<span class="qi" aria-hidden="true">+</span></button></h4>
       <p class="a" id="faq-a7">安装包目前使用开发者自签名证书，Windows 会提示「未知发布者」。点「更多信息」→「仍要运行」即可安装；这是签名层级问题，不是安全问题——数据全程只在本机，不上传。可与 Release 页的 SHA256SUMS.txt 核对文件一致后放心安装。</p>
     </div>
@@ -3207,8 +3212,8 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
       <p class="a" id="faq-a5">增强档 Qwen3-4B 下载约 2.3GB，强力档 Qwen3-8B 约 4.7GB。模型按需下载，装好后完全离线；建议额外预留空间用于解压和运行。</p>
     </div>
     <div class="qa reveal">
-      <h4><button type="button" class="qa-btn" aria-expanded="false" aria-controls="faq-a6">同一个安装包，怎么安装我需要的版本？<span class="qi" aria-hidden="true">+</span></button></h4>
-      <p class="a" id="faq-a6">统一安装包在安装时让你选角色：辅导员工作平台或班干部工作平台。选完装好就是对应单一产品，应用内不再切换角色。基础版 / 标准版由激活码决定，不影响安装包；装错角色可卸载重装重选。</p>
+      <h4><button type="button" class="qa-btn" aria-expanded="false" aria-controls="faq-a8">同一个安装包，怎么安装我需要的版本？<span class="qi" aria-hidden="true">+</span></button></h4>
+      <p class="a" id="faq-a8">统一安装包在安装时让你选角色：辅导员工作平台或班干部工作平台。选完装好就是对应单一产品，应用内不再切换角色。基础版 / 标准版由激活码决定，不影响安装包；装错角色可卸载重装重选。</p>
     </div>
   </div>
 </div></section>
@@ -3218,7 +3223,7 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 <footer>
   <div class="wrap foot-min">
     <div class="fm-line fm-main">
-      <b>教育工作台</b><span>v5.1.0</span>
+      <b>教育工作台</b><span>v5.2.0</span>
       <a href="#matrix">产品矩阵</a>
       <a href="#ai">AI 工作方式</a>
       <a href="#tiers">授权档位</a>
