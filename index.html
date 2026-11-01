@@ -941,45 +941,6 @@ footer{border-top:1px solid var(--line);padding:52px 0 30px;background:linear-gr
   .ew-arrow{animation:none}
 }
 
-/* 5.4.0 版本更新：左侧版本叙述，右侧按真实使用变化排列 */
-#release{padding-top:38px;padding-bottom:70px}
-.release-panel{position:relative;display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1.18fr);gap:44px;padding:34px 36px;border-radius:28px;border:1px solid rgba(22,119,255,.14);background:radial-gradient(520px 300px at 0% 0%,rgba(22,119,255,.12),transparent 62%),radial-gradient(420px 260px at 100% 100%,rgba(16,185,129,.12),transparent 66%),rgba(255,255,255,.8);box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 26px 64px rgba(16,88,180,.1);overflow:hidden}
-.release-panel::after{content:"5.4";position:absolute;right:-10px;bottom:-42px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:180px;line-height:1;font-weight:900;letter-spacing:-.12em;color:rgba(22,119,255,.045);pointer-events:none}
-.release-copy,.release-list{position:relative;z-index:1}
-.release-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:10px;letter-spacing:.13em;color:var(--brand-text)}
-.release-meta span{padding:5px 9px;border:1px solid rgba(22,119,255,.18);border-radius:999px;background:rgba(255,255,255,.66)}
-.release-meta b{color:#087d61;font-weight:800}
-.release-copy h2{margin:18px 0 14px;font-size:clamp(27px,3vw,38px);line-height:1.26;letter-spacing:-.045em;color:var(--ink)}
-.release-copy h2 em{font-style:normal;color:var(--brand-text);white-space:nowrap}
-.release-copy>p{font-size:14px;line-height:1.85;color:var(--ink2);max-width:430px}
-.release-note{margin-top:22px;padding-top:18px;border-top:1px solid rgba(22,119,255,.12);display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.65;color:var(--ink3)}
-.release-note i{flex:none;width:7px;height:7px;margin-top:7px;border-radius:50%;background:#10b981;box-shadow:0 0 0 4px rgba(16,185,129,.11)}
-.release-list{border-left:1px solid rgba(22,119,255,.14);padding-left:32px}
-.release-item{display:grid;grid-template-columns:42px minmax(0,1fr);gap:15px;padding:15px 0;border-top:1px solid rgba(22,119,255,.1)}
-.release-item:first-child{padding-top:0;border-top:0}
-.release-item:last-child{padding-bottom:0}
-.release-no{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:10px;font-weight:800;letter-spacing:.08em;color:var(--brand-text);padding-top:3px}
-.release-item:nth-child(3) .release-no{color:#0b8a6a}
-.release-item h3{font-size:16px;line-height:1.4;letter-spacing:-.02em;margin-bottom:4px;color:var(--ink)}
-.release-item p{font-size:12.5px;line-height:1.72;color:var(--ink2)}
-.release-item p b{color:var(--brand-text);font-weight:750}
-.release-item:nth-child(3) p b{color:#087d61}
-.release-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}
-.release-actions .btn{padding:11px 16px;border-radius:11px}
-.release-actions small{font-size:10.5px;color:var(--ink3)}
-@media(max-width:820px){
-  .release-panel{grid-template-columns:1fr;gap:26px;padding:28px 24px}
-  .release-list{border-left:0;border-top:1px solid rgba(22,119,255,.14);padding-left:0;padding-top:22px}
-  .release-copy>p{max-width:none}
-}
-@media(max-width:520px){
-  #release{padding-top:28px;padding-bottom:54px}
-  .release-panel{padding:24px 19px;border-radius:22px}
-  .release-item{grid-template-columns:34px minmax(0,1fr);gap:10px}
-  .release-copy h2{font-size:26px}
-  .release-actions .btn{width:100%;justify-content:center}
-}
-
 /* 收窄交接与场景的间隔；场景改为日程轨道 */
 #matrix{padding-bottom:36px}
 #scenarios{padding-top:44px}
@@ -2706,6 +2667,34 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
 @media (prefers-reduced-motion:reduce){
   .team-ui::after,.cta-card::after{animation:none}
 }
+
+/* 内测共建名单：编辑式名册，不做头像卡片墙 */
+.about-crew{margin-top:38px;padding-top:24px;border-top:1px solid rgba(22,119,255,.12)}
+.crew-head{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.crew-kicker{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:.16em;color:var(--brand-text)}
+.crew-head p{max-width:460px;margin:0;font-size:12px;line-height:1.8;color:var(--ink3);text-align:right}
+.crew-groups{display:block;margin-top:18px}
+.crew-group{display:grid;grid-template-columns:132px minmax(0,1fr);gap:28px;align-items:start;padding:18px 0;border-top:1px solid rgba(22,119,255,.1)}
+.crew-group:last-child{padding-bottom:0}
+.crew-group h3{display:flex;align-items:center;gap:8px;margin-top:2px;font-size:10px;letter-spacing:.12em;color:var(--ink3);font-weight:700;white-space:nowrap}
+.crew-group h3 span{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:8.5px;color:var(--brand-text);background:rgba(22,119,255,.06);border:1px solid rgba(22,119,255,.12);border-radius:4px;padding:1px 5px;letter-spacing:.04em}
+.crew-group ul{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 22px;margin-top:0}
+.crew-group:last-child ul{grid-template-columns:repeat(4,minmax(0,1fr))}
+.crew-group li{display:flex;flex-direction:column;min-width:0}
+.crew-group b{font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.01em;transition:color .2s}
+.crew-group li:hover b{color:var(--brand-text)}
+.crew-group li span{font-size:10.5px;line-height:1.45;color:var(--ink3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crew-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;padding-top:12px;border-top:1px dashed rgba(22,119,255,.12);font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:9.5px;letter-spacing:.04em;color:#96a7bb}
+@media(max-width:760px){
+  .about-crew{margin-top:28px;padding-top:20px}
+  .crew-head p{max-width:none;text-align:left}
+  .crew-groups{margin-top:16px}
+  .crew-group{grid-template-columns:1fr;gap:12px;padding:16px 0}
+  .crew-group ul,.crew-group:last-child ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:380px){
+  .crew-group ul,.crew-group:last-child ul{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -2721,7 +2710,6 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
     <nav class="nav-links" aria-label="主导航">
       <a class="navlink" href="#pain">痛点</a>
       <a class="navlink" href="#matrix">产品矩阵</a>
-      <a class="navlink" href="#release">5.4 更新</a>
       <a class="navlink" href="#scenarios">场景</a>
       <a class="navlink" href="#ai">AI</a>
       <a class="navlink" href="#whylocal">为什么本机</a>
@@ -2948,41 +2936,6 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
     </div>
   </div>
 
-</div></section>
-
-<!-- 5.4.0 更新 -->
-<section id="release" aria-labelledby="release-title"><div class="wrap">
-  <div class="release-panel reveal">
-    <div class="release-copy">
-      <div class="release-meta"><span>RELEASE</span><span>V5.4.0</span><b>● 已发布</b></div>
-      <h2 id="release-title">这一版，把班干部端真正<em>收进一个班级。</em></h2>
-      <p>不是把辅导员端简单缩小一份。学生、评议、心理摸排、荣誉和材料，都围绕当前绑定班重新收拢，单班工作台终于有了自己的完整路径。</p>
-      <div class="release-note"><i aria-hidden="true"></i><span>统一安装包首次安装时选角色；班干部端装后独立更新、独立数据，不会与辅导员端串库。</span></div>
-      <div class="release-actions">
-        <a class="btn btn--primary btn--sm" href="https://github.com/KongDeShang/fudaoyuan-releases/releases/latest/download/edu-workbench-unified-setup.exe" aria-label="下载教育工作台 v5.4.0 统一安装包">下载 v5.4.0</a>
-        <a class="btn btn--ghost btn--sm" href="https://github.com/KongDeShang/fudaoyuan-cadre-releases/releases/tag/v5.4.0-cadre" target="_blank" rel="noopener" aria-label="查看班干部工作平台 v5.4.0 更新说明">查看班干部更新</a>
-        <small>Windows · 本机运行 · 离线可用</small>
-      </div>
-    </div>
-    <div class="release-list" role="list" aria-label="v5.4.0 主要更新">
-      <article class="release-item" role="listitem">
-        <span class="release-no">01</span>
-        <div><h3>学生档案，单开一页</h3><p>点击学生直接进入完整档案页，刷新、前进后退、上一位和下一位都能用，不再被右侧抽屉挤在半个屏幕里。</p></div>
-      </article>
-      <article class="release-item" role="listitem">
-        <span class="release-no">02</span>
-        <div><h3>单班数据，不再串班</h3><p>学生列表、搜索、统计和导出只计算当前绑定班；导入遇到外班记录会<b>先说明、再跳过</b>，不会悄悄混进来。</p></div>
-      </article>
-      <article class="release-item" role="listitem">
-        <span class="release-no">03</span>
-        <div><h3>评议与摸排，共用一条时间线</h3><p>班级评议、资助结果和心理摸排统一为横向时间轴，点一个节点就能查看当次名单和状态，不用在重复批次里来回找。</p></div>
-      </article>
-      <article class="release-item" role="listitem">
-        <span class="release-no">04</span>
-        <div><h3>荣誉类型，按真实工作扩展</h3><p>活动获奖、竞赛成果等可以自定义类型；评议关联改为选填，历史荣誉和旧备份继续兼容。</p></div>
-      </article>
-    </div>
-  </div>
 </div></section>
 
 <section id="scenarios" aria-labelledby="scenarios-title" style="background:linear-gradient(180deg,transparent,rgba(22,119,255,.04),transparent)"><div class="wrap">
@@ -3245,6 +3198,23 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
     <div class="about-body">
       <p>项目由石家庄铁道大学 机械工程学院 · 孔德尚（学生干部 · 项目开发者）、曹京亚（老师 · 项目开发者）牵头，苏康辅导员全程参与需求打磨与功能设计。我们从真实学工场景出发，把日常痛点做成完整产品：34 个可见功能模块、本机大模型、政策智库、加密备份，以及能解释“谁已同步、哪里待确认”的班内协作。原则只有一条——学生业务数据存本地，学生隐私是底线。希望它能帮你省点时间、少点重复劳动；有想法，欢迎随时交流。</p>
     </div>
+    <div class="about-crew">
+      <div class="crew-head">
+        <span class="crew-kicker">BETA CREW / 内测共建</span>
+        <p>他们先用，也把问题带了回来。内测期的想法、截图和吐槽，最后都落进了产品里。</p>
+      </div>
+      <div class="crew-groups">
+        <section class="crew-group" aria-label="老师与辅导员">
+          <h3>老师 / 辅导员 <span>05</span></h3>
+          <ul><li><b>苏康</b><span>辅导员 · 机械工程学院</span></li><li><b>曹京亚</b><span>老师 · 机械工程学院</span></li><li><b>李俊杰</b><span>辅导员 · 机械工程学院</span></li><li><b>张连鹏</b><span>老师 · 机械工程学院</span></li><li><b>孙彦龙</b><span>老师 · 交通运输学院</span></li></ul>
+        </section>
+        <section class="crew-group" aria-label="班委与同学">
+          <h3>班委 / 同学 <span>13</span></h3>
+          <ul><li><b>崔城</b><span>团支书 · 机2401-5</span></li><li><b>郝子瑜</b><span>班长 · 机2401-1</span></li><li><b>李炘钰</b><span>卫生委员 · 机2401-6</span></li><li><b>乔衍硕</b><span>宣传委员 · 机2401-6</span></li><li><b>张茜畅</b><span>学习委员 · 机2401-6</span></li><li><b>王庆宇</b><span>班长 · 机2401-2</span></li><li><b>王方旭</b><span>副团支书 · 机2401-6</span></li><li><b>田雨</b><span>团支书 · 机2401-2</span></li><li><b>高宏智</b><span>班长 · 机2401-3</span></li><li><b>陈天择</b><span>班长 · 机2401-4</span></li><li><b>李国豪</b><span>团支书 · 机2401-4</span></li><li><b>孙庆月</b><span>班长 · 机2401-5</span></li><li><b>马景琦</b><span>机2405-2</span></li></ul>
+        </section>
+      </div>
+      <div class="crew-foot"><span>18 位内测成员</span><span>排名不分先后</span></div>
+    </div>
   </div>
 </div></section>
 
@@ -3319,7 +3289,7 @@ footer{padding:34px 0 26px;background:rgba(255,255,255,.45);border-top:1px solid
     var h = doc.documentElement, sc = h.scrollTop/(h.scrollHeight-h.clientHeight)||0
     bar.style.width = (sc*100)+'%'
     nav.classList.toggle('scrolled', h.scrollTop > 30)
-    var ids = ['pain','matrix','release','scenarios','team','ai','whylocal','tiers','about','cta','faq'], cur=''
+    var ids = ['pain','matrix','scenarios','team','ai','whylocal','tiers','about','cta','faq'], cur=''
     for (var i=0;i<ids.length;i++){ var el=doc.getElementById(ids[i]); if(el && el.getBoundingClientRect().top <= h.clientHeight*0.4) cur=ids[i] }
     doc.querySelectorAll('.navlink').forEach(function(a){
       a.classList.toggle('active', a.getAttribute('href')==='#'+cur)
